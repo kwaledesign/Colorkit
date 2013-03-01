@@ -1,0 +1,4 @@
+Colorkit
+========
+
+Sass color library
