@@ -1,0 +1,43 @@
+/**
+ * Red-Oranges
+ * 
+ */
+
+$red-orange: mix(red, red-orange) !default;
+
+/**
+ * Tints
+ */
+$red-orange--tint-stack: tint-stack($red-orange, $sixths);
+
+$red-orange--tint-1: nth($red-orange--tint-stack, 2);
+$red-orange--tint-2: nth($red-orange--tint-stack, 3);
+$red-orange--tint-3: nth($red-orange--tint-stack, 4);
+$red-orange--tint-4: nth($red-orange--tint-stack, 5);
+$red-orange--tint-5: nth($red-orange--tint-stack, 6);
+$red-orange--tint-6: nth($red-orange--tint-stack, 7);
+
+/**
+ * Tones
+ */
+$red-orange--tone-stack: tone-stack($red-orange, $sixths);
+
+$red-orange--tone-1: nth($red-orange--tone-stack, 2);
+$red-orange--tone-2: nth($red-orange--tone-stack, 3);
+$red-orange--tone-3: nth($red-orange--tone-stack, 4);
+$red-orange--tone-4: nth($red-orange--tone-stack, 5);
+$red-orange--tone-5: nth($red-orange--tone-stack, 6);
+$red-orange--tone-6: nth($red-orange--tone-stack, 7);
+
+/**
+ * Shades
+ */
+$red-orange--shade-stack: shade-stack($red-orange, $sixths);
+
+$red-orange--shade-1: nth($red-orange--shade-stack, 2);
+$red-orange--shade-2: nth($red-orange--shade-stack, 3);
+$red-orange--shade-3: nth($red-orange--shade-stack, 4);
+$red-orange--shade-4: nth($red-orange--shade-stack, 5);
+$red-orange--shade-5: nth($red-orange--shade-stack, 6);
+$red-orange--shade-6: nth($red-orange--shade-stack, 7);
+

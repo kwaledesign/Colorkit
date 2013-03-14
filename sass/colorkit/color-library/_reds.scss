@@ -1,0 +1,43 @@
+/**
+ * Reds
+ * 
+ */
+
+$red: #FF0000 !default;
+
+/**
+ * Tints
+ */
+$red--tint-stack: tint-stack($red, $sixths);
+
+$red--tint-1: nth($red--tint-stack, 2);
+$red--tint-2: nth($red--tint-stack, 3);
+$red--tint-3: nth($red--tint-stack, 4);
+$red--tint-4: nth($red--tint-stack, 5);
+$red--tint-5: nth($red--tint-stack, 6);
+$red--tint-6: nth($red--tint-stack, 7);
+
+/**
+ * Tones
+ */
+$red--tone-stack: tone-stack($red, $sixths);
+
+$red--tone-1: nth($red--tone-stack, 2);
+$red--tone-2: nth($red--tone-stack, 3);
+$red--tone-3: nth($red--tone-stack, 4);
+$red--tone-4: nth($red--tone-stack, 5);
+$red--tone-5: nth($red--tone-stack, 6);
+$red--tone-6: nth($red--tone-stack, 7);
+
+/**
+ * Shades
+ */
+$red--shade-stack: shade-stack($red, $sixths);
+
+$red--shade-1: nth($red--shade-stack, 2);
+$red--shade-2: nth($red--shade-stack, 3);
+$red--shade-3: nth($red--shade-stack, 4);
+$red--shade-4: nth($red--shade-stack, 5);
+$red--shade-5: nth($red--shade-stack, 6);
+$red--shade-6: nth($red--shade-stack, 7);
+

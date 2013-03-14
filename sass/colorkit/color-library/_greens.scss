@@ -1,0 +1,43 @@
+/**
+ * Greens
+ * 
+ */
+
+$green: #008800 !default;
+
+/**
+ * Tints
+ */
+$green--tint-stack: tint-stack($green, $sixths);
+
+$green--tint-1: nth($green--tint-stack, 2);
+$green--tint-2: nth($green--tint-stack, 3);
+$green--tint-3: nth($green--tint-stack, 4);
+$green--tint-4: nth($green--tint-stack, 5);
+$green--tint-5: nth($green--tint-stack, 6);
+$green--tint-6: nth($green--tint-stack, 7);
+
+/**
+ * Tones
+ */
+$green--tone-stack: tone-stack($green, $sixths);
+
+$green--tone-1: nth($green--tone-stack, 2);
+$green--tone-2: nth($green--tone-stack, 3);
+$green--tone-3: nth($green--tone-stack, 4);
+$green--tone-4: nth($green--tone-stack, 5);
+$green--tone-5: nth($green--tone-stack, 6);
+$green--tone-6: nth($green--tone-stack, 7);
+
+/**
+ * Shades
+ */
+$green--shade-stack: shade-stack($green, $sixths);
+
+$green--shade-1: nth($green--shade-stack, 2);
+$green--shade-2: nth($green--shade-stack, 3);
+$green--shade-3: nth($green--shade-stack, 4);
+$green--shade-4: nth($green--shade-stack, 5);
+$green--shade-5: nth($green--shade-stack, 6);
+$green--shade-6: nth($green--shade-stack, 7);
+

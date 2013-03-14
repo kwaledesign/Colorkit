@@ -1,0 +1,301 @@
+/**
+ * Color Scheme Pallet
+ *
+ * for experimenting with color in the browser
+ * 
+ * generates monochromatic, complementary, split-complementary, triadic,
+ * analogous, double-complementary, tetradic, and quadradic color-schemes along
+ * with (six by default) tints, tones, and shades of each color.  These colors 
+ * are given class names automaticly.
+ */
+
+@mixin color-scheme-pallet($key-color: red) {
+  $base-color: $key-color;
+/**
+ * Monochromatic Color Scheme
+ */
+  .monochromatic {
+    @include color-scheme(monochromatic, $key-color);
+    /* Pure Color Swatch */
+    .pure-color-swatch { background: $base-color; }
+    /* base color-block */
+    .base {
+      $tint-stack: tint-stack($base-color, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($base-color,$sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($base-color, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+  }
+
+/**
+ * Complementary Color Scheme
+ */
+  .complementary {
+    @include color-scheme(complementary, $key-color);
+    /* Pure Color Swatch */
+    .base .pure-color-swatch { background: $base-color; }
+    .complementary .pure-color-swatch { background: $complementary; }
+   /* base color-block */ 
+    .base {
+      $tint-stack: tint-stack($base-color, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($base-color,$sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($base-color, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    /* complementary color-block */
+    .complementary {
+      $tint-stack: tint-stack($complementary, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($complementary, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($complementary, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+  }
+
+/**
+ * Split-Complementary Color Scheme
+ * 
+ */
+  .split-complementary {
+    @include color-scheme(split-complementary, $key-color);
+    /* Pure Color Swatch */
+    .base .pure-color-swatch { background: $base-color; }
+    .secondaryA .pure-color-swatch { background: $secondaryA; }
+    .secondaryB .pure-color-swatch { background: $secondaryB; }
+    .base {
+      $tint-stack: tint-stack($base-color, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($base-color,$sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($base-color, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryA {
+      $tint-stack: tint-stack($secondaryA, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryA, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryA, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryB {
+      $tint-stack: tint-stack($secondaryB, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryB, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryB, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+  }
+
+/**
+ * Triadic Color Scheme
+ */
+  .triadic {
+    @include color-scheme(triadic, $key-color);
+    /* Pure Color Swatch */
+    .base .pure-color-swatch { background: $base-color; }
+    .secondaryA .pure-color-swatch { background: $secondaryA; }
+    .secondaryB .pure-color-swatch { background: $secondaryB; }
+    .base {
+      $tint-stack: tint-stack($base-color, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($base-color,$sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($base-color, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryA {
+      $tint-stack: tint-stack($secondaryA, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryA, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryA, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryB {
+      $tint-stack: tint-stack($secondaryB, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryB, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryB, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+  }
+
+/**
+ * Analogous Color Scheme
+ */
+  .analogous{
+    @include color-scheme(analogous, $key-color); 
+    /* Pure Color Swatch */
+    .pure-color-swatch { background: $base-color; }
+    .secondaryA .pure-color-swatch { background: $secondaryA; }
+    .secondaryB .pure-color-swatch { background: $secondaryB; }
+    .base {
+      $tint-stack: tint-stack($base-color, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($base-color,$sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($base-color, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryA {
+      $tint-stack: tint-stack($secondaryA, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryA, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryA, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryB {
+      $tint-stack: tint-stack($secondaryB, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryB, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryB, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+  }
+
+/**
+ * Double Complementary Color Scheme
+ */
+  /* Pure Color Swatch */
+  .double-complementary {
+    @include color-scheme(double-complementary, $key-color);
+    .base .pure-color-swatch { background: $base-color; }
+    .secondaryA .pure-color-swatch { background: $secondaryA; }
+    .secondaryB .pure-color-swatch { background: $secondaryB; }
+    .complementary .pure-color-swatch { background: $complementary; }
+    .base {
+      $tint-stack: tint-stack($base-color, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($base-color,$sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($base-color, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryA {
+      $tint-stack: tint-stack($secondaryA, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryA, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryA, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryB {
+      $tint-stack: tint-stack($secondaryB, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryB, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryB, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .complementary {
+      $tint-stack: tint-stack($complementary, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($complementary, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($complementary, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+  }
+
+/**
+ * Tetradic Color Scheme
+ */
+
+  /* Pure Color Swatch */
+  .tetradic {
+    @include color-scheme(tetradic, $key-color);
+    .base .pure-color-swatch { background: $base-color; }
+    .secondaryA .pure-color-swatch { background: $secondaryA; }
+    .secondaryB .pure-color-swatch { background: $secondaryB; }
+    .complementary .pure-color-swatch { background: $complementary; }
+    .base {
+      $tint-stack: tint-stack($base-color, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($base-color,$sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($base-color, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryA {
+      $tint-stack: tint-stack($secondaryA, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryA, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryA, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryB {
+      $tint-stack: tint-stack($secondaryB, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryB, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryB, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .complementary {
+      $tint-stack: tint-stack($complementary, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($complementary, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($complementary, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+  }
+
+/**
+ * Quadradic Color Scheme
+ */
+
+  .quadradic { 
+    @include color-scheme(quadradic, $key-color);
+    /* Pure Color Swatch */
+    .base .pure-color-swatch { background: $base-color; }
+    .secondaryA .pure-color-swatch { background: $secondaryA; }
+    .secondaryB .pure-color-swatch { background: $secondaryB; }
+    .complementary .pure-color-swatch { background: $complementary; }
+    .base {
+      $tint-stack: tint-stack($base-color, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($base-color,$sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($base-color, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryA {
+      $tint-stack: tint-stack($secondaryA, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryA, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryA, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .secondaryB {
+      $tint-stack: tint-stack($secondaryB, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($secondaryB, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($secondaryB, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+    .complementary {
+      $tint-stack: tint-stack($complementary, $sixths);
+      @include swatch-gen($tint-stack, tint);
+      $tone-stack: tone-stack($complementary, $sixths);
+      @include swatch-gen($tone-stack, tone);
+      $shade-stack: shade-stack($complementary, $sixths);
+      @include swatch-gen($shade-stack, shade);
+    }
+  }
+
+} 
+

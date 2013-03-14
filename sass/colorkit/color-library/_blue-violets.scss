@@ -1,0 +1,43 @@
+/**
+ * Blue-Violets
+ * 
+ */
+
+$blue-violet: mix(blue, violet) !default;
+
+/**
+ * Tints
+ */
+$blue-violet--tint-stack: tint-stack($blue-violet, $sixths);
+
+$blue-violet--tint-1: nth($blue-violet--tint-stack, 2);
+$blue-violet--tint-2: nth($blue-violet--tint-stack, 3);
+$blue-violet--tint-3: nth($blue-violet--tint-stack, 4);
+$blue-violet--tint-4: nth($blue-violet--tint-stack, 5);
+$blue-violet--tint-5: nth($blue-violet--tint-stack, 6);
+$blue-violet--tint-6: nth($blue-violet--tint-stack, 7);
+
+/**
+ * Tones
+ */
+$blue-violet--tone-stack: tone-stack($blue-violet, $sixths);
+
+$blue-violet--tone-1: nth($blue-violet--tone-stack, 2);
+$blue-violet--tone-2: nth($blue-violet--tone-stack, 3);
+$blue-violet--tone-3: nth($blue-violet--tone-stack, 4);
+$blue-violet--tone-4: nth($blue-violet--tone-stack, 5);
+$blue-violet--tone-5: nth($blue-violet--tone-stack, 6);
+$blue-violet--tone-6: nth($blue-violet--tone-stack, 7);
+
+/**
+ * Shades
+ */
+$blue-violet--shade-stack: shade-stack($blue-violet, $sixths);
+
+$blue-violet--shade-1: nth($blue-violet--shade-stack, 2);
+$blue-violet--shade-2: nth($blue-violet--shade-stack, 3);
+$blue-violet--shade-3: nth($blue-violet--shade-stack, 4);
+$blue-violet--shade-4: nth($blue-violet--shade-stack, 5);
+$blue-violet--shade-5: nth($blue-violet--shade-stack, 6);
+$blue-violet--shade-6: nth($blue-violet--shade-stack, 7);
+

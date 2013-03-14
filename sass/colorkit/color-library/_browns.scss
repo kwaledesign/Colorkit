@@ -1,0 +1,43 @@
+/**
+ * Browns
+ * 
+ */
+
+$brown: #A52A2A !default;
+
+/**
+ * Tints
+ */
+$brown--tint-stack: tint-stack($brown, $sixths);
+
+$brown--tint-1: nth($brown--tint-stack, 2);
+$brown--tint-2: nth($brown--tint-stack, 3);
+$brown--tint-3: nth($brown--tint-stack, 4);
+$brown--tint-4: nth($brown--tint-stack, 5);
+$brown--tint-5: nth($brown--tint-stack, 6);
+$brown--tint-6: nth($brown--tint-stack, 7);
+
+/**
+ * Tones
+ */
+$brown--tone-stack: tone-stack($brown, $sixths);
+
+$brown--tone-1: nth($brown--tone-stack, 2);
+$brown--tone-2: nth($brown--tone-stack, 3);
+$brown--tone-3: nth($brown--tone-stack, 4);
+$brown--tone-4: nth($brown--tone-stack, 5);
+$brown--tone-5: nth($brown--tone-stack, 6);
+$brown--tone-6: nth($brown--tone-stack, 7);
+
+/**
+ * Shades
+ */
+$brown--shade-stack: shade-stack($brown, $sixths);
+
+$brown--shade-1: nth($brown--shade-stack, 2);
+$brown--shade-2: nth($brown--shade-stack, 3);
+$brown--shade-3: nth($brown--shade-stack, 4);
+$brown--shade-4: nth($brown--shade-stack, 5);
+$brown--shade-5: nth($brown--shade-stack, 6);
+$brown--shade-6: nth($brown--shade-stack, 7);
+

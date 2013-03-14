@@ -1,0 +1,43 @@
+/**
+ * Yellows
+ * 
+ */
+
+$yellow: #FFFF00 !default;
+
+/**
+ * Tints
+ */
+$yellow--tint-stack: tint-stack($yellow, $sixths);
+
+$yellow--tint-1: nth($yellow--tint-stack, 2);
+$yellow--tint-2: nth($yellow--tint-stack, 3);
+$yellow--tint-3: nth($yellow--tint-stack, 4);
+$yellow--tint-4: nth($yellow--tint-stack, 5);
+$yellow--tint-5: nth($yellow--tint-stack, 6);
+$yellow--tint-6: nth($yellow--tint-stack, 7);
+
+/**
+ * Tones
+ */
+$yellow--tone-stack: tone-stack($yellow, $sixths);
+
+$yellow--tone-1: nth($yellow--tone-stack, 2);
+$yellow--tone-2: nth($yellow--tone-stack, 3);
+$yellow--tone-3: nth($yellow--tone-stack, 4);
+$yellow--tone-4: nth($yellow--tone-stack, 5);
+$yellow--tone-5: nth($yellow--tone-stack, 6);
+$yellow--tone-6: nth($yellow--tone-stack, 7);
+
+/**
+ * Shades
+ */
+$yellow--shade-stack: shade-stack($yellow, $sixths);
+
+$yellow--shade-1: nth($yellow--shade-stack, 2);
+$yellow--shade-2: nth($yellow--shade-stack, 3);
+$yellow--shade-3: nth($yellow--shade-stack, 4);
+$yellow--shade-4: nth($yellow--shade-stack, 5);
+$yellow--shade-5: nth($yellow--shade-stack, 6);
+$yellow--shade-6: nth($yellow--shade-stack, 7);
+

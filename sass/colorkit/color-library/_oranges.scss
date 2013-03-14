@@ -1,0 +1,43 @@
+/**
+ * Oranges
+ * 
+ */
+
+$orange: #FFA500 !default;
+
+/**
+ * Tints
+ */
+$orange--tint-stack: tint-stack($orange, $sixths);
+
+$orange--tint-1: nth($orange--tint-stack, 2);
+$orange--tint-2: nth($orange--tint-stack, 3);
+$orange--tint-3: nth($orange--tint-stack, 4);
+$orange--tint-4: nth($orange--tint-stack, 5);
+$orange--tint-5: nth($orange--tint-stack, 6);
+$orange--tint-6: nth($orange--tint-stack, 7);
+
+/**
+ * Tones
+ */
+$orange--tone-stack: tone-stack($orange, $sixths);
+
+$orange--tone-1: nth($orange--tone-stack, 2);
+$orange--tone-2: nth($orange--tone-stack, 3);
+$orange--tone-3: nth($orange--tone-stack, 4);
+$orange--tone-4: nth($orange--tone-stack, 5);
+$orange--tone-5: nth($orange--tone-stack, 6);
+$orange--tone-6: nth($orange--tone-stack, 7);
+
+/**
+ * Shades
+ */
+$orange--shade-stack: shade-stack($orange, $sixths);
+
+$orange--shade-1: nth($orange--shade-stack, 2);
+$orange--shade-2: nth($orange--shade-stack, 3);
+$orange--shade-3: nth($orange--shade-stack, 4);
+$orange--shade-4: nth($orange--shade-stack, 5);
+$orange--shade-5: nth($orange--shade-stack, 6);
+$orange--shade-6: nth($orange--shade-stack, 7);
+

@@ -1,0 +1,43 @@
+/**
+ * Whites
+ * 
+ */
+
+$white: white(0) !default;
+
+/**
+ * Tints
+ */
+$white--tint-stack: tint-stack($white, $sixths);
+
+$white--tint-1: nth($white--tint-stack, 2);
+$white--tint-2: nth($white--tint-stack, 3);
+$white--tint-3: nth($white--tint-stack, 4);
+$white--tint-4: nth($white--tint-stack, 5);
+$white--tint-5: nth($white--tint-stack, 6);
+$white--tint-6: nth($white--tint-stack, 7);
+
+/**
+ * Tones
+ */
+$white--tone-stack: tone-stack($white, $sixths);
+
+$white--tone-1: nth($white--tone-stack, 2);
+$white--tone-2: nth($white--tone-stack, 3);
+$white--tone-3: nth($white--tone-stack, 4);
+$white--tone-4: nth($white--tone-stack, 5);
+$white--tone-5: nth($white--tone-stack, 6);
+$white--tone-6: nth($white--tone-stack, 7);
+
+/**
+ * Shades
+ */
+$white--shade-stack: shade-stack($white, $sixths);
+
+$white--shade-1: nth($white--shade-stack, 2);
+$white--shade-2: nth($white--shade-stack, 3);
+$white--shade-3: nth($white--shade-stack, 4);
+$white--shade-4: nth($white--shade-stack, 5);
+$white--shade-5: nth($white--shade-stack, 6);
+$white--shade-6: nth($white--shade-stack, 7);
+
