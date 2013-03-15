@@ -5,8 +5,12 @@
  * 
  * generates monochromatic, complementary, split-complementary, triadic,
  * analogous, double-complementary, tetradic, and quadradic color-schemes along
- * with (six by default) tints, tones, and shades of each color.  These colors 
- * are given class names automaticly.
+ * with (six by default) tints, tones, and shades of each color in your scheme.  
+ * These colors are given class names automaticly. 
+ *
+ * Remember: the first value in the $tint-stack, $tone-stack, and $shade-stack
+ * lists is the unadjusted color, meaning each stack includes the color which the
+ * stack was derived from. The adjusted colors in the stack begin at 2.
  */
 
 @mixin color-scheme-pallet($key-color: red) {
@@ -16,9 +20,7 @@
  */
   .monochromatic {
     @include color-scheme(monochromatic, $key-color);
-    /* Pure Color Swatch */
     .pure-color-swatch { background: $base-color; }
-    /* base color-block */
     .base {
       $tint-stack: tint-stack($base-color, $sixths);
       @include swatch-gen($tint-stack, tint);
@@ -34,10 +36,8 @@
  */
   .complementary {
     @include color-scheme(complementary, $key-color);
-    /* Pure Color Swatch */
     .base .pure-color-swatch { background: $base-color; }
     .complementary .pure-color-swatch { background: $complementary; }
-   /* base color-block */ 
     .base {
       $tint-stack: tint-stack($base-color, $sixths);
       @include swatch-gen($tint-stack, tint);
@@ -46,7 +46,6 @@
       $shade-stack: shade-stack($base-color, $sixths);
       @include swatch-gen($shade-stack, shade);
     }
-    /* complementary color-block */
     .complementary {
       $tint-stack: tint-stack($complementary, $sixths);
       @include swatch-gen($tint-stack, tint);
@@ -59,11 +58,9 @@
 
 /**
  * Split-Complementary Color Scheme
- * 
  */
   .split-complementary {
     @include color-scheme(split-complementary, $key-color);
-    /* Pure Color Swatch */
     .base .pure-color-swatch { background: $base-color; }
     .secondaryA .pure-color-swatch { background: $secondaryA; }
     .secondaryB .pure-color-swatch { background: $secondaryB; }
@@ -98,7 +95,6 @@
  */
   .triadic {
     @include color-scheme(triadic, $key-color);
-    /* Pure Color Swatch */
     .base .pure-color-swatch { background: $base-color; }
     .secondaryA .pure-color-swatch { background: $secondaryA; }
     .secondaryB .pure-color-swatch { background: $secondaryB; }
@@ -133,7 +129,6 @@
  */
   .analogous{
     @include color-scheme(analogous, $key-color); 
-    /* Pure Color Swatch */
     .pure-color-swatch { background: $base-color; }
     .secondaryA .pure-color-swatch { background: $secondaryA; }
     .secondaryB .pure-color-swatch { background: $secondaryB; }
@@ -166,7 +161,6 @@
 /**
  * Double Complementary Color Scheme
  */
-  /* Pure Color Swatch */
   .double-complementary {
     @include color-scheme(double-complementary, $key-color);
     .base .pure-color-swatch { background: $base-color; }
@@ -210,8 +204,6 @@
 /**
  * Tetradic Color Scheme
  */
-
-  /* Pure Color Swatch */
   .tetradic {
     @include color-scheme(tetradic, $key-color);
     .base .pure-color-swatch { background: $base-color; }
@@ -255,10 +247,8 @@
 /**
  * Quadradic Color Scheme
  */
-
   .quadradic { 
     @include color-scheme(quadradic, $key-color);
-    /* Pure Color Swatch */
     .base .pure-color-swatch { background: $base-color; }
     .secondaryA .pure-color-swatch { background: $secondaryA; }
     .secondaryB .pure-color-swatch { background: $secondaryB; }

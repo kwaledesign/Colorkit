@@ -14,10 +14,12 @@
  * $amounts: Optional list of percentage mix intervals
  */
 
-//additional amount variables... thirds, quarters, fifths, sixths, eighths..
-
+/**
+ * Amounts
+ * 
+ * used in stack functions to create multiple color variants
+ */
 $default-amounts  : 20% 40% 60% 70% 80%     !default;
-
 $sixths: 15% 30% 45% 60% 75% 90%;
 
 $amounts          : $default-amounts        !default;
@@ -25,6 +27,20 @@ $default-tints    : $default-amounts        !default;
 $default-shades   : $default-amounts        !default;
 $default-tones    : $default-amounts        !default;
 
+
+/**
+ * Color Stack
+ * 
+ * creates a list (color pallet) of color values based on the following arguments:
+ *
+ * $main: the color to generate variants from
+ * $second: the color to mix with $main to create the variants
+ * $amounts: the list of mixture amounts, determines the number of variants
+ *
+ * Remember: the first value in the stack is the unadjusted color, meaning each 
+ * stack includes the color which the stack was derived from. The adjusted colors 
+ * in the stack begin at 2.
+ */
 @function color-stack($main, $second, $amounts: $default-amounts) {
   $stack: $main;
   @each $amount in $amounts {
@@ -94,6 +110,7 @@ $default-tones    : $default-amounts        !default;
 @function alpha-black($opacity) {
   @return rgba(0,0,0,$opacity);
 }
+
 @function alpha-white($opacity) {
 	@return rgba(255,255,255,$opacity);
 }
@@ -103,9 +120,10 @@ $default-tones    : $default-amounts        !default;
  * 
  * mixin to generate harmonious color-scheme variables 
  *
- * $color-relationship: monochromatic, complementary, split-complementary, triadic, tetradic, quadradic
+ * $color-relationship: monochromatic, analogous, complementary, split-complementary, triadic, tetradic, quadradic
  * $base-color: the color to initiate the color scheme with
  * $color-angle: the degrees of seperation between colors on the wheel.
+ *
  */
 
 // initialize variables
@@ -151,7 +169,6 @@ $color-angle: 30) {
 		$complementary: complement($base-color);
 	}
 }
-
 
 /**
  * Color Swatch Generator
