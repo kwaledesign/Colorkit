@@ -103,7 +103,7 @@ $success-color--bg:                 $success-color;
 $success-color--border:             darken(adjust-hue($success-color, -10), 5%) !default;
 
 $info-color:                        #D9EDF7 !default;
-$info-color--txt:                   tint($info-color);
+$info-color--txt:                   tint($info-color, 25%);
 $info-clor--bg:                     $info-color;
-$info-color--border:                darken(adjust-hue($infoBackground, -10), 7%) !default;
+$info-color--border:                darken(adjust-hue($info-color, -10), 7%) !default;
 
