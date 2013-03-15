@@ -61,9 +61,10 @@ color variables. Be sure to `@include` towards the top of your project's main
 stylesheet to be sure these variables are available project wide.
 
 ###Credit
-Color-stack functions were borrowed from [Snugug's] excellent [toolkit]
+Color-stack functions were borrowed from [Snugug's](https://twitter.com/Snugug) excellent
+[toolkit](https://github.com/Snugug/toolkit#colour-functions)
 
 
 ##License
-Dual [MIT] and [GPL] license.
+Dual MIT and GPL license.
 
