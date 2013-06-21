@@ -64,7 +64,7 @@ stylesheet to be sure these variables are available project wide.
 Color-stack functions were borrowed from [Snugug's](https://twitter.com/Snugug) excellent
 [toolkit](https://github.com/Snugug/toolkit#colour-functions)
 
-
-##License
-Dual MIT and GPL license.
+<hr>
+### License
+© Kwale Design - Original source code dual licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php) / [GPL2 license](http://www.gnu.org/licenses/gpl-2.0.html). Open-sourced projects used within this project retain their original licenses.
 
