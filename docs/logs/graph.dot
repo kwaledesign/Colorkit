@@ -1,9 +1,0 @@
-digraph G {
-"PatternNode(*.html|hd|ft|jinja)" -> "Doc(descriptions.md|pandoc|htmlsections)";
-"PatternNode(*.html|hd|ft|jinja)" -> "PatternNode(color-stacks/_*.html|htmlsections)";
-"PatternNode(*.html|hd|ft|jinja)" -> "PatternNode(color-schemes/_*.html|htmlsections)";
-"PatternNode(*.html|hd|ft|jinja)" -> "Doc(_header.html|jinja)";
-"PatternNode(*.html|hd|ft|jinja)" -> "PatternNode(_*.html)";
-"BundleNode(assests)" -> "PatternNode(*.png)";
-"BundleNode(assests)" -> "PatternNode(*.css)";
-}
