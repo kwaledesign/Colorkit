@@ -1,0 +1,513 @@
+/**
+ * Color Pallet
+ * 
+ * global color settings
+ */
+/**
+ * Import Colorkit
+ * 
+ */
+/**
+ * Colorkit
+ * 
+ */
+/**
+ * Color Stacks
+ *
+ * Returns a list of mixed colors at given intervals based on two initial source colors
+ * https://github.com/ericam/accoutrement/blob/master/stylesheets/accoutrement/_color.scss
+ * 
+ * $main: The main color this stack is based on
+ * $second: The color to be mixed in at varrying amounts
+ * $amounts: Optional list of percentage mix intervals
+ */
+/**
+ * Amounts
+ * 
+ * used in stack functions to create multiple color variants
+ */
+/**
+ * Color Stack
+ * 
+ * creates a list (color pallet) of color values based on the following arguments:
+ *
+ * $main: the color to generate variants from
+ * $second: the color to mix with $main to create the variants
+ * $amounts: the list of mixture amounts, determines the number of variants
+ *
+ * Remember: the first value in the stack is the unadjusted color, meaning each 
+ * stack includes the color which the stack was derived from. The adjusted colors 
+ * in the stack begin at 2.
+ */
+/**
+ * Value Stacks
+ *
+ * Functions to return a tint/shade/tone stack based on a given color
+ * 
+ * $color: color to adjust
+ * $amounts: optional list of percentage amounts
+ */
+/**
+ * Simple Color Value
+ * 
+ * Functions to adjust the tint/shade/tone of a single color
+ *
+ * $color: color to adjust
+ * $amount: the percentage amount
+ */
+/**
+ * Grey Scale 
+ * 
+ * return opapue/alpha grey scale
+ */
+/**
+ * Color-Scheme
+ * 
+ * mixin to generate harmonious color-scheme variables 
+ *
+ * $color-relationship: monochromatic, analogous, complementary, split-complementary, triadic, tetradic, quadradic
+ * $base-color: the color to initiate the color scheme with
+ * $color-angle: the degrees of seperation between colors on the wheel.
+ *
+ */
+/**
+ * Color Swatch Generator
+ *
+ * generates color swatch class names based on a given color list
+ * $color-swatches
+ *
+ * ex:
+ * $swatches: color-stack(red, blue, $default-amounts);
+ * @include swatch-gen($swatches);
+ */
+/**
+ * Colorkit Color Library
+ *
+ */
+/**
+ * Reds
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Red-Oranges
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Oranges
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Yellow-Orange
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Yellows
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Yellow-Greens
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Greens
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Blue-Greens
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Blues
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Blue-Violets
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Violets
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Red-Violets
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Browns
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Greys
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Color Scheme Pallet
+ *
+ * for experimenting with color in the browser
+ * 
+ * generates monochromatic, complementary, split-complementary, triadic,
+ * analogous, double-complementary, tetradic, and quadradic color-schemes along
+ * with (six by default) tints, tones, and shades of each color in your scheme.  
+ * These colors are given class names automaticly. 
+ *
+ * Remember: the first value in the $tint-stack, $tone-stack, and $shade-stack
+ * lists is the unadjusted color, meaning each stack includes the color which the
+ * stack was derived from. The adjusted colors in the stack begin at 2.
+ */
+/**
+ * Blue-Greens
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Blue-Violets
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Blues
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Browns
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Greens
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Greys
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Oranges
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Red-Oranges
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Red-Violets
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Reds
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Violets
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Yellow-Greens
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Yellow-Orange
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Yellows
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Color Scheme
+ * 
+ * Generate harmonious color scheme based on a single key-color ($base-color)
+ *
+ * $base-color: any CSS color value or keyword
+ * $color-relationship: monochromatic/complementary/spit-complementary/analogous/triadic/tetradic/quadradic
+ * $color-angle: (defaults to 30)
+ */
+/**
+ * Black and White
+ */
+/**
+ * Shadow and Highlight
+ */
+/**
+ * Semantic Utilities
+ *
+ * utility color variables to extend with semantic variable names
+ */
+/**
+ * Text Colors
+ */
+/**
+ * Background Colors
+ */
+/**
+ * Brand Colors
+ *
+ * prefixed with '$brand-' to avoid proper color names for ease of use and to avoid collision with CSS color keywords
+ * ex: $brand-blue: deepskyblue; or: $brand-accent: tint($brand-blue, 12%);
+ */
+/**
+ * ex:
+ * $brand-blue:;
+ * $brand-primary:;
+ * $brand-secondary:;
+ * $brand-accent:;
+ */
+/**
+ * UI and State Colors
+ *
+ */
+/*
+$primary-color:                     #2ba6cb !default;
+$secondary-color:                   #e9e9e9 !default;
+$tertiary-color: 
+$accent-color: $accent;
+*/
