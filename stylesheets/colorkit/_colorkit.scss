@@ -1,19 +1,190 @@
-@import "colorkit/colorkit.scss";
-@import "colorkit/color-library.scss";
-@import "colorkit/color-scheme.scss";
+/**
+ * Colorkit
+ * 
+ */
 
-@import "colorkit/color-library/blue-greens.scss";
-@import "colorkit/color-library/blue-violets.scss";
-@import "colorkit/color-library/blues.scss";
-@import "colorkit/color-library/browns.scss";
-@import "colorkit/color-library/greens.scss";
-@import "colorkit/color-library/greys.scss";
-@import "colorkit/color-library/oranges.scss";
-@import "colorkit/color-library/red-oranges.scss";
-@import "colorkit/color-library/red-violets.scss";
-@import "colorkit/color-library/reds.scss";
-@import "colorkit/color-library/violets.scss";
-@import "colorkit/color-library/yellow-greens.scss";
-@import "colorkit/color-library/yellow-oranges.scss";
-@import "colorkit/color-library/yellows.scss";
+/**
+ * Color Stacks
+ *
+ * Returns a list of mixed colors at given intervals based on two initial source colors
+ * https://github.com/ericam/accoutrement/blob/master/stylesheets/accoutrement/_color.scss
+ * 
+ * $main: The main color this stack is based on
+ * $second: The color to be mixed in at varrying amounts
+ * $amounts: Optional list of percentage mix intervals
+ */
+
+/**
+ * Amounts
+ * 
+ * used in stack functions to create multiple color variants
+ */
+$default-amounts  : 20% 40% 60% 70% 80%     !default;
+$sixths: 15% 30% 45% 60% 75% 90%;
+
+$amounts          : $default-amounts        !default;
+$default-tints    : $default-amounts        !default;
+$default-shades   : $default-amounts        !default;
+$default-tones    : $default-amounts        !default;
+
+
+/**
+ * Color Stack
+ * 
+ * creates a list (color pallet) of color values based on the following arguments:
+ *
+ * $main: the color to generate variants from
+ * $second: the color to mix with $main to create the variants
+ * $amounts: the list of mixture amounts, determines the number of variants
+ *
+ * Remember: the first value in the stack is the unadjusted color, meaning each 
+ * stack includes the color which the stack was derived from. The adjusted colors 
+ * in the stack begin at 2.
+ */
+@function color-stack($main, $second, $amounts: $default-amounts) {
+  $stack: $main;
+  @each $amount in $amounts {
+    $stack: join($stack, mix($second, $main, $amount));
+  }
+  @return $stack;
+}
+
+/**
+ * Value Stacks
+ *
+ * Functions to return a tint/shade/tone stack based on a given color
+ * 
+ * $color: color to adjust
+ * $amounts: optional list of percentage amounts
+ */
+
+// Tints
+@function tint-stack($color, $amounts: $default-tints) {
+    @return color-stack($color, #fff, $amounts);
+}
+// Shades
+@function shade-stack($color, $amounts: $default-shades) {  
+    @return color-stack($color, #000, $amounts);
+}
+// Tones
+@function tone-stack($color, $amounts: $default-tones) {
+  @return color-stack($color, #808080, $amounts);
+}
+
+/**
+ * Simple Color Value
+ * 
+ * Functions to adjust the tint/shade/tone of a single color
+ *
+ * $color: color to adjust
+ * $amount: the percentage amount
+ */
+// Tint
+@function tint($color, $amount) {
+  @return mix(#fff, $color, $amount);
+}
+// Shade
+@function shade($color, $amount) {
+  @return mix(#000, $color, $amount);
+}
+// Tone
+@function tone($color, $amount) {
+  @return mix(#808080, $color, $amount);
+}
+
+/**
+ * Grey Scale 
+ * 
+ * return opapue/alpha grey scale
+ */
+// gray-scale (opaque)
+@function black($tint) {
+	@return lighten(#000, $tint);
+}
+
+@function white($shade) {
+	@return darken(#FFF, $shade);
+}
+
+// gray-scale (alpha) 
+@function alpha-black($opacity) {
+  @return rgba(0,0,0,$opacity);
+}
+
+@function alpha-white($opacity) {
+	@return rgba(255,255,255,$opacity);
+}
+
+/**
+ * Color-Scheme
+ * 
+ * mixin to generate harmonious color-scheme variables 
+ *
+ * $color-relationship: monochromatic, analogous, complementary, split-complementary, triadic, tetradic, quadradic
+ * $base-color: the color to initiate the color scheme with
+ * $color-angle: the degrees of seperation between colors on the wheel.
+ *
+ */
+
+// initialize variables
+$complementary: null;
+$secondaryA: null;
+$secondaryB: null;
+
+@mixin color-scheme(
+$color-relationship: "monochromatic",
+$base-color: red,
+$color-angle: 30) {
+	@if $color-relationship == "monochromatic" {
+    $base-color: $base-color;
+  }
+	@if $color-relationship == "complementary" {
+		$complementary: complement($base-color);
+	}
+	@if $color-relationship == "split-complementary" {
+		$secondaryA: adjust-hue($base-color, 180 + $color-angle);
+		$secondaryB: adjust-hue($base-color, 180 - $color-angle);
+	}
+	@if $color-relationship == "double-complementary" {
+		$secondaryA: adjust-hue($base-color, $color-angle);
+		$secondaryB: complement($secondaryA);
+		$complementary: complement($base-color);
+	}
+	@if $color-relationship == "triadic" {
+		$secondaryA: adjust-hue($base-color, 120);
+		$secondaryB: adjust-hue($base-color, -120);
+	}
+	@if $color-relationship == "analogous" {
+		$secondaryA: adjust-hue($base-color, $color-angle);
+		$secondaryB: adjust-hue($base-color, - $color-angle);
+	}
+	@if $color-relationship == "tetradic" {
+		$secondaryA: adjust-hue($base-color, 300);
+		$secondaryB: complement($secondaryA);
+		$complementary: complement($base-color);
+	}
+	@if $color-relationship == "quadradic" {
+		$secondaryA: adjust-hue($base-color, 90);
+		$secondaryB: complement($secondaryA);  
+		$complementary: complement($base-color);
+	}
+}
+
+/**
+ * Color Swatch Generator
+ *
+ * generates color swatch class names based on a given color list
+ * $color-swatches
+ *
+ * ex:
+ * $swatches: color-stack(red, blue, $default-amounts);
+ * @include swatch-gen($swatches);
+ */
+@mixin swatch-gen($color-swatches: null, $swatch-name: color-swatch) {
+  $n: length($color-swatches);
+  @while $n > 0 {
+    .#{$swatch-name}-#{$n} { background: nth($color-swatches, $n); }
+    $n: $n - 1;
+  }
+}
 
