@@ -1,0 +1,102 @@
+
+@import "../../sass/screen.scss";
+
+
+@include color-scheme-pallet(red);
+
+/**
+ * Swatches
+ */
+$swatch-border: 4px solid white;
+$swatch-shadow: 0px 0px 6px 0px rgba(0,0,0,.25);
+$swatch-margin: .5%;
+
+/**
+ * Color Swatches
+ */
+$color-swatch-height: 2em;
+$color-swatch--margin: $swatch-margin;
+
+
+.swatch-1of1 { width: 100%; }
+.swatch-1of2 { width: ( 100% - ( $swatch-margin * ( 1 ) ) ) / 2; }
+.swatch-1of3 { width: ( 100% - ( $swatch-margin * ( 2 ) ) ) / 3; }
+.swatch-1of4 { width: ( 100% - ( $swatch-margin * ( 3 ) ) ) / 4; }
+.swatch-1of5 { width: ( 100% - ( $swatch-margin * ( 4 ) ) ) / 5; }
+.swatch-1of6 { width: ( 100% - ( $swatch-margin * ( 5 ) ) ) / 6; }
+.swatch-1of7 { width: ( 100% - ( $swatch-margin * ( 6 ) ) ) / 7; }
+.swatch-1of8 { width: ( 100% - ( $swatch-margin * ( 7 ) ) ) / 8; }
+
+.tint-stack,
+.tone-stack,
+.shade-stack {
+  /*@extend %row;*/
+  @include pie-clearfix;
+}
+
+.tint-stack div,
+.tone-stack div,
+.shade-stack div {
+  @extend .swatch-1of6;
+  float: left;
+  height: $color-swatch-height;
+  //background: #DFDFDF;
+  margin-right: .25em; //$swatch-margin;
+}
+
+.tone-stack div,
+.shade-stack div {
+  margin-top: .25em;
+}
+
+.tint-stack div:last-of-type,
+.tone-stack div:last-of-type,
+.shade-stack div:last-of-type {
+  // margin-right: 0; 
+}
+
+.tint-6,
+.tone-6,
+.shade-6 {
+  // margin-right: 30px;
+}
+.color-swatch:last-child {
+  margin-right: 0;
+}
+
+/*
+[class*="tint-"],
+[class*="tone-"],
+[class*="shade-"] { margin-right: $swatch-margin; }
+
+[class*="tint-"]:last-of-type,
+[class*="tone-"]:last-of-type,
+[class*="shade-"]:last-of-type { margin-right: 0; }
+*/
+
+%swatch {
+  border: $swatch-border;
+  box-shadow: $swatch-shadow;
+  margin-bottom: $swatch-margin;
+}
+
+.color-block {
+  @extend %row;
+  @extend %swatch;
+}
+
+.pure-color-swatch {
+  @extend %unit;
+  @extend %size1of8;
+  height: .5em + ($color-swatch-height * 3);
+ // background-color: red;
+  //margin-top: .5em;
+//  margin-bottom: $color-swatch--margin;
+}
+// ( (($swatch-margin / 100%) * 1em ) * 2 ) + 
+.color-swatch {
+  @extend %unit;
+  @extend %size7of8;
+}
+
+

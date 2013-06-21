@@ -1,0 +1,2717 @@
+/**
+ * simpleGrid
+ * 
+ * for when you need a quick and dirty grid
+ */
+/**
+ * Import Compass 
+ *
+ * used for easy clearfix and borderbox on demo
+ */
+/**
+ * grid variables
+ */
+/**
+ * Grid Debug
+ * 
+ * visually debug grid layouts
+ */
+/**
+ * Force border-box sizing for everything
+ */
+/* line 37, ../sass/_grid.scss */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * visual demo styles
+ */
+/*
+.grid-demo {
+  .unit {background: #999999; opacity: 0.5; height: 40px; border: 1px solid purple;}
+  @include grid-debug();
+}
+ */
+/**
+ * Grid Rows and Units
+ */
+/* line 52, ../sass/_grid.scss */
+.color-block {
+  *zoom: 1;
+  padding: 0 0px;
+}
+/* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.color-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 53, ../sass/_grid.scss */
+.pure-color-swatch, .color-swatch {
+  float: left;
+  padding: 0 0px;
+}
+
+/**
+ * Grid Unit Extenders
+ */
+/* line 67, ../sass/_grid.scss */
+.pure-color-swatch {
+  width: 12.5%;
+}
+
+/* line 94, ../sass/_grid.scss */
+.color-swatch {
+  width: 87.5%;
+}
+
+/* line 1, ../sass/_docs.scss */
+.my-sticky-element.stuck {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* line 6, ../sass/_docs.scss */
+.my-sticky-element {
+  background-color: #CCC;
+  padding: 10px;
+  text-align: center;
+}
+
+/* line 11, ../sass/_docs.scss */
+.masthead {
+  padding-top: 8em;
+  padding-bottom: 2em;
+  margin: 0;
+  position: relative;
+  z-index: -2;
+  text-align: center;
+  background: #DFDFDF;
+}
+
+/* line 20, ../sass/_docs.scss */
+.header {
+  color: #FFF;
+  text-shadow: 0px 2px 2px #222;
+  font-family: sans-serif;
+  text-size: 3em;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  margin-left: -100px;
+  margin-right: -100px;
+}
+
+/* line 33, ../sass/_docs.scss */
+.logo {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -100px;
+  margin-right: -100px;
+  opacity: .75;
+  z-index: -1;
+}
+
+/* line 44, ../sass/_docs.scss */
+.slogan {
+  color: #222;
+}
+
+/* line 47, ../sass/_docs.scss */
+.footer {
+  padding: 2em 0 2 em 0;
+  background-color: #222;
+}
+
+/**
+ * Colorkit
+ * 
+ */
+/**
+ * Color Stacks
+ *
+ * Returns a list of mixed colors at given intervals based on two initial source colors
+ * https://github.com/ericam/accoutrement/blob/master/stylesheets/accoutrement/_color.scss
+ * 
+ * $main: The main color this stack is based on
+ * $second: The color to be mixed in at varrying amounts
+ * $amounts: Optional list of percentage mix intervals
+ */
+/**
+ * Amounts
+ * 
+ * used in stack functions to create multiple color variants
+ */
+/**
+ * Color Stack
+ * 
+ * creates a list (color pallet) of color values based on the following arguments:
+ *
+ * $main: the color to generate variants from
+ * $second: the color to mix with $main to create the variants
+ * $amounts: the list of mixture amounts, determines the number of variants
+ *
+ * Remember: the first value in the stack is the unadjusted color, meaning each 
+ * stack includes the color which the stack was derived from. The adjusted colors 
+ * in the stack begin at 2.
+ */
+/**
+ * Value Stacks
+ *
+ * Functions to return a tint/shade/tone stack based on a given color
+ * 
+ * $color: color to adjust
+ * $amounts: optional list of percentage amounts
+ */
+/**
+ * Simple Color Value
+ * 
+ * Functions to adjust the tint/shade/tone of a single color
+ *
+ * $color: color to adjust
+ * $amount: the percentage amount
+ */
+/**
+ * Grey Scale 
+ * 
+ * return opapue/alpha grey scale
+ */
+/**
+ * Color-Scheme
+ * 
+ * mixin to generate harmonious color-scheme variables 
+ *
+ * $color-relationship: monochromatic, analogous, complementary, split-complementary, triadic, tetradic, quadradic
+ * $base-color: the color to initiate the color scheme with
+ * $color-angle: the degrees of seperation between colors on the wheel.
+ *
+ */
+/**
+ * Color Swatch Generator
+ *
+ * generates color swatch class names based on a given color list
+ * $color-swatches
+ *
+ * ex:
+ * $swatches: color-stack(red, blue, $default-amounts);
+ * @include swatch-gen($swatches);
+ */
+/**
+ * Color Pallet
+ * 
+ * global color settings
+ */
+/**
+ * Import Colorkit Color Library
+ * 
+ * comment this out if unneeded
+ */
+/**
+ * Colorkit Color Library
+ *
+ */
+/**
+ * Reds
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Red-Oranges
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Oranges
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Yellow-Orange
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Yellows
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Yellow-Greens
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Greens
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Blue-Greens
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Blues
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Blue-Violets
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Violets
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Red-Violets
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Browns
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Greys
+ * 
+ */
+/**
+ * Tints
+ */
+/**
+ * Tones
+ */
+/**
+ * Shades
+ */
+/**
+ * Color Scheme
+ * 
+ * Generate harmonious color scheme based on a single key-color ($base-color)
+ *
+ * $base-color: any CSS color value or keyword
+ * $color-relationship: monochromatic/complementary/spit-complementary/analogous/triadic/tetradic/quadradic
+ * $color-angle: (defaults to 30)
+ */
+/**
+ * Black and White
+ */
+/**
+ * Shadow and Highlight
+ */
+/**
+ * Semantic Utilities
+ *
+ * utility color variables to extend with semantic variable names
+ */
+/**
+ * Text Colors
+ */
+/**
+ * Background Colors
+ */
+/**
+ * Brand Colors
+ *
+ * prefixed with '$brand-' to avoid proper color names for ease of use and to avoid collision with CSS color keywords
+ * ex: $brand-blue: deepskyblue; or: $brand-accent: tint($brand-blue, 12%);
+ */
+/**
+ * ex:
+ * $brand-blue:;
+ * $brand-primary:;
+ * $brand-secondary:;
+ * $brand-accent:;
+ */
+/**
+ * UI and State Colors
+ *
+ */
+/*
+$primary-color:                     #2ba6cb !default;
+$secondary-color:                   #e9e9e9 !default;
+$tertiary-color: 
+$accent-color: $accent;
+*/
+/**
+ * Color Scheme Pallet
+ *
+ * for experimenting with color in the browser
+ * 
+ * generates monochromatic, complementary, split-complementary, triadic,
+ * analogous, double-complementary, tetradic, and quadradic color-schemes along
+ * with (six by default) tints, tones, and shades of each color in your scheme.  
+ * These colors are given class names automaticly. 
+ *
+ * Remember: the first value in the $tint-stack, $tone-stack, and $shade-stack
+ * lists is the unadjusted color, meaning each stack includes the color which the
+ * stack was derived from. The adjusted colors in the stack begin at 2.
+ */
+/**
+ * Monochromatic Color Scheme
+ */
+/* line 23, ../../sass/colorkit/_color-scheme.scss */
+.monochromatic .pure-color-swatch {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tint-7 {
+  background: #ffe5e5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tint-6 {
+  background: #ffbfbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tint-5 {
+  background: #ff9999;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tint-4 {
+  background: #ff7272;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tint-3 {
+  background: #ff4c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tint-2 {
+  background: #ff2626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tint-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tone-7 {
+  background: #8c7373;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tone-6 {
+  background: #9f6060;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tone-5 {
+  background: #b24c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tone-4 {
+  background: #c53939;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tone-3 {
+  background: #d82626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tone-2 {
+  background: #eb1313;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .tone-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .shade-7 {
+  background: #190000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .shade-6 {
+  background: #3f0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .shade-5 {
+  background: #660000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .shade-4 {
+  background: #8c0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .shade-3 {
+  background: #b20000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .shade-2 {
+  background: #d80000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.monochromatic .base .shade-1 {
+  background: red;
+}
+
+/**
+ * Complementary Color Scheme
+ */
+/* line 39, ../../sass/colorkit/_color-scheme.scss */
+.complementary .base .pure-color-swatch {
+  background: red;
+}
+/* line 40, ../../sass/colorkit/_color-scheme.scss */
+.complementary .complementary .pure-color-swatch {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tint-7 {
+  background: #ffe5e5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tint-6 {
+  background: #ffbfbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tint-5 {
+  background: #ff9999;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tint-4 {
+  background: #ff7272;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tint-3 {
+  background: #ff4c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tint-2 {
+  background: #ff2626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tint-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tone-7 {
+  background: #8c7373;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tone-6 {
+  background: #9f6060;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tone-5 {
+  background: #b24c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tone-4 {
+  background: #c53939;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tone-3 {
+  background: #d82626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tone-2 {
+  background: #eb1313;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .tone-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .shade-7 {
+  background: #190000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .shade-6 {
+  background: #3f0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .shade-5 {
+  background: #660000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .shade-4 {
+  background: #8c0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .shade-3 {
+  background: #b20000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .shade-2 {
+  background: #d80000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .base .shade-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tint-7 {
+  background: #e5ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tint-6 {
+  background: #bfffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tint-5 {
+  background: #99ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tint-4 {
+  background: #72ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tint-3 {
+  background: #4cffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tint-2 {
+  background: #26ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tint-1 {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tone-7 {
+  background: #738c8c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tone-6 {
+  background: #609f9f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tone-5 {
+  background: #4cb2b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tone-4 {
+  background: #39c5c5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tone-3 {
+  background: #26d8d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tone-2 {
+  background: #13ebeb;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .tone-1 {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .shade-7 {
+  background: #001919;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .shade-6 {
+  background: #003f3f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .shade-5 {
+  background: #006666;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .shade-4 {
+  background: #008c8c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .shade-3 {
+  background: #00b2b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .shade-2 {
+  background: #00d8d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.complementary .complementary .shade-1 {
+  background: cyan;
+}
+
+/**
+ * Split-Complementary Color Scheme
+ */
+/* line 64, ../../sass/colorkit/_color-scheme.scss */
+.split-complementary .base .pure-color-swatch {
+  background: red;
+}
+/* line 65, ../../sass/colorkit/_color-scheme.scss */
+.split-complementary .secondaryA .pure-color-swatch {
+  background: #007fff;
+}
+/* line 66, ../../sass/colorkit/_color-scheme.scss */
+.split-complementary .secondaryB .pure-color-swatch {
+  background: #00ff80;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tint-7 {
+  background: #ffe5e5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tint-6 {
+  background: #ffbfbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tint-5 {
+  background: #ff9999;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tint-4 {
+  background: #ff7272;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tint-3 {
+  background: #ff4c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tint-2 {
+  background: #ff2626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tint-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tone-7 {
+  background: #8c7373;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tone-6 {
+  background: #9f6060;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tone-5 {
+  background: #b24c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tone-4 {
+  background: #c53939;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tone-3 {
+  background: #d82626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tone-2 {
+  background: #eb1313;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .tone-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .shade-7 {
+  background: #190000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .shade-6 {
+  background: #3f0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .shade-5 {
+  background: #660000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .shade-4 {
+  background: #8c0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .shade-3 {
+  background: #b20000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .shade-2 {
+  background: #d80000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .base .shade-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tint-7 {
+  background: #e5f2ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tint-6 {
+  background: #bfdfff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tint-5 {
+  background: #99cbff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tint-4 {
+  background: #72b8ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tint-3 {
+  background: #4ca5ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tint-2 {
+  background: #2692ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tint-1 {
+  background: #007fff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tone-7 {
+  background: #737f8c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tone-6 {
+  background: #607f9f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tone-5 {
+  background: #4c7fb2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tone-4 {
+  background: #397fc5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tone-3 {
+  background: #267fd8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tone-2 {
+  background: #137feb;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .tone-1 {
+  background: #007fff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .shade-7 {
+  background: #000c19;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .shade-6 {
+  background: #001f3f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .shade-5 {
+  background: #003266;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .shade-4 {
+  background: #00458c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .shade-3 {
+  background: #0058b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .shade-2 {
+  background: #006bd8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryA .shade-1 {
+  background: #007fff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tint-7 {
+  background: #e5fff2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tint-6 {
+  background: #bfffdf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tint-5 {
+  background: #99ffcc;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tint-4 {
+  background: #72ffb9;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tint-3 {
+  background: #4cffa6;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tint-2 {
+  background: #26ff93;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tint-1 {
+  background: #00ff80;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tone-7 {
+  background: #738c80;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tone-6 {
+  background: #609f80;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tone-5 {
+  background: #4cb280;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tone-4 {
+  background: #39c580;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tone-3 {
+  background: #26d880;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tone-2 {
+  background: #13eb80;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .tone-1 {
+  background: #00ff80;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .shade-7 {
+  background: #00190c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .shade-6 {
+  background: #003f20;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .shade-5 {
+  background: #006633;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .shade-4 {
+  background: #008c46;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .shade-3 {
+  background: #00b259;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .shade-2 {
+  background: #00d86c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.split-complementary .secondaryB .shade-1 {
+  background: #00ff80;
+}
+
+/**
+ * Triadic Color Scheme
+ */
+/* line 98, ../../sass/colorkit/_color-scheme.scss */
+.triadic .base .pure-color-swatch {
+  background: red;
+}
+/* line 99, ../../sass/colorkit/_color-scheme.scss */
+.triadic .secondaryA .pure-color-swatch {
+  background: lime;
+}
+/* line 100, ../../sass/colorkit/_color-scheme.scss */
+.triadic .secondaryB .pure-color-swatch {
+  background: blue;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tint-7 {
+  background: #ffe5e5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tint-6 {
+  background: #ffbfbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tint-5 {
+  background: #ff9999;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tint-4 {
+  background: #ff7272;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tint-3 {
+  background: #ff4c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tint-2 {
+  background: #ff2626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tint-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tone-7 {
+  background: #8c7373;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tone-6 {
+  background: #9f6060;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tone-5 {
+  background: #b24c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tone-4 {
+  background: #c53939;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tone-3 {
+  background: #d82626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tone-2 {
+  background: #eb1313;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .tone-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .shade-7 {
+  background: #190000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .shade-6 {
+  background: #3f0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .shade-5 {
+  background: #660000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .shade-4 {
+  background: #8c0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .shade-3 {
+  background: #b20000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .shade-2 {
+  background: #d80000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .base .shade-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tint-7 {
+  background: #e5ffe5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tint-6 {
+  background: #bfffbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tint-5 {
+  background: #99ff99;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tint-4 {
+  background: #72ff72;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tint-3 {
+  background: #4cff4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tint-2 {
+  background: #26ff26;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tint-1 {
+  background: lime;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tone-7 {
+  background: #738c73;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tone-6 {
+  background: #609f60;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tone-5 {
+  background: #4cb24c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tone-4 {
+  background: #39c539;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tone-3 {
+  background: #26d826;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tone-2 {
+  background: #13eb13;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .tone-1 {
+  background: lime;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .shade-7 {
+  background: #001900;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .shade-6 {
+  background: #003f00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .shade-5 {
+  background: #006600;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .shade-4 {
+  background: #008c00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .shade-3 {
+  background: #00b200;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .shade-2 {
+  background: #00d800;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryA .shade-1 {
+  background: lime;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tint-7 {
+  background: #e5e5ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tint-6 {
+  background: #bfbfff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tint-5 {
+  background: #9999ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tint-4 {
+  background: #7272ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tint-3 {
+  background: #4c4cff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tint-2 {
+  background: #2626ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tint-1 {
+  background: blue;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tone-7 {
+  background: #73738c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tone-6 {
+  background: #60609f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tone-5 {
+  background: #4c4cb2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tone-4 {
+  background: #3939c5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tone-3 {
+  background: #2626d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tone-2 {
+  background: #1313eb;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .tone-1 {
+  background: blue;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .shade-7 {
+  background: #000019;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .shade-6 {
+  background: #00003f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .shade-5 {
+  background: #000066;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .shade-4 {
+  background: #00008c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .shade-3 {
+  background: #0000b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .shade-2 {
+  background: #0000d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.triadic .secondaryB .shade-1 {
+  background: blue;
+}
+
+/**
+ * Analogous Color Scheme
+ */
+/* line 132, ../../sass/colorkit/_color-scheme.scss */
+.analogous .pure-color-swatch {
+  background: red;
+}
+/* line 133, ../../sass/colorkit/_color-scheme.scss */
+.analogous .secondaryA .pure-color-swatch {
+  background: #ff8000;
+}
+/* line 134, ../../sass/colorkit/_color-scheme.scss */
+.analogous .secondaryB .pure-color-swatch {
+  background: #ff0080;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tint-7 {
+  background: #ffe5e5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tint-6 {
+  background: #ffbfbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tint-5 {
+  background: #ff9999;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tint-4 {
+  background: #ff7272;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tint-3 {
+  background: #ff4c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tint-2 {
+  background: #ff2626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tint-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tone-7 {
+  background: #8c7373;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tone-6 {
+  background: #9f6060;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tone-5 {
+  background: #b24c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tone-4 {
+  background: #c53939;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tone-3 {
+  background: #d82626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tone-2 {
+  background: #eb1313;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .tone-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .shade-7 {
+  background: #190000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .shade-6 {
+  background: #3f0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .shade-5 {
+  background: #660000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .shade-4 {
+  background: #8c0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .shade-3 {
+  background: #b20000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .shade-2 {
+  background: #d80000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .base .shade-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tint-7 {
+  background: #fff2e5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tint-6 {
+  background: #ffdfbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tint-5 {
+  background: #ffcc99;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tint-4 {
+  background: #ffb972;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tint-3 {
+  background: #ffa64c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tint-2 {
+  background: #ff9326;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tint-1 {
+  background: #ff8000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tone-7 {
+  background: #8c8073;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tone-6 {
+  background: #9f8060;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tone-5 {
+  background: #b2804c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tone-4 {
+  background: #c58039;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tone-3 {
+  background: #d88026;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tone-2 {
+  background: #eb8013;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .tone-1 {
+  background: #ff8000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .shade-7 {
+  background: #190c00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .shade-6 {
+  background: #3f2000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .shade-5 {
+  background: #663300;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .shade-4 {
+  background: #8c4600;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .shade-3 {
+  background: #b25900;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .shade-2 {
+  background: #d86c00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryA .shade-1 {
+  background: #ff8000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tint-7 {
+  background: #ffe5f2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tint-6 {
+  background: #ffbfdf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tint-5 {
+  background: #ff99cc;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tint-4 {
+  background: #ff72b9;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tint-3 {
+  background: #ff4ca6;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tint-2 {
+  background: #ff2693;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tint-1 {
+  background: #ff0080;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tone-7 {
+  background: #8c7380;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tone-6 {
+  background: #9f6080;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tone-5 {
+  background: #b24c80;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tone-4 {
+  background: #c53980;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tone-3 {
+  background: #d82680;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tone-2 {
+  background: #eb1380;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .tone-1 {
+  background: #ff0080;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .shade-7 {
+  background: #19000c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .shade-6 {
+  background: #3f0020;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .shade-5 {
+  background: #660033;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .shade-4 {
+  background: #8c0046;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .shade-3 {
+  background: #b20059;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .shade-2 {
+  background: #d8006c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.analogous .secondaryB .shade-1 {
+  background: #ff0080;
+}
+
+/**
+ * Double Complementary Color Scheme
+ */
+/* line 166, ../../sass/colorkit/_color-scheme.scss */
+.double-complementary .base .pure-color-swatch {
+  background: red;
+}
+/* line 167, ../../sass/colorkit/_color-scheme.scss */
+.double-complementary .secondaryA .pure-color-swatch {
+  background: #ff8000;
+}
+/* line 168, ../../sass/colorkit/_color-scheme.scss */
+.double-complementary .secondaryB .pure-color-swatch {
+  background: #007fff;
+}
+/* line 169, ../../sass/colorkit/_color-scheme.scss */
+.double-complementary .complementary .pure-color-swatch {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tint-7 {
+  background: #ffe5e5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tint-6 {
+  background: #ffbfbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tint-5 {
+  background: #ff9999;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tint-4 {
+  background: #ff7272;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tint-3 {
+  background: #ff4c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tint-2 {
+  background: #ff2626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tint-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tone-7 {
+  background: #8c7373;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tone-6 {
+  background: #9f6060;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tone-5 {
+  background: #b24c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tone-4 {
+  background: #c53939;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tone-3 {
+  background: #d82626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tone-2 {
+  background: #eb1313;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .tone-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .shade-7 {
+  background: #190000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .shade-6 {
+  background: #3f0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .shade-5 {
+  background: #660000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .shade-4 {
+  background: #8c0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .shade-3 {
+  background: #b20000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .shade-2 {
+  background: #d80000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .base .shade-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tint-7 {
+  background: #fff2e5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tint-6 {
+  background: #ffdfbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tint-5 {
+  background: #ffcc99;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tint-4 {
+  background: #ffb972;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tint-3 {
+  background: #ffa64c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tint-2 {
+  background: #ff9326;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tint-1 {
+  background: #ff8000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tone-7 {
+  background: #8c8073;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tone-6 {
+  background: #9f8060;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tone-5 {
+  background: #b2804c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tone-4 {
+  background: #c58039;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tone-3 {
+  background: #d88026;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tone-2 {
+  background: #eb8013;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .tone-1 {
+  background: #ff8000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .shade-7 {
+  background: #190c00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .shade-6 {
+  background: #3f2000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .shade-5 {
+  background: #663300;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .shade-4 {
+  background: #8c4600;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .shade-3 {
+  background: #b25900;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .shade-2 {
+  background: #d86c00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryA .shade-1 {
+  background: #ff8000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tint-7 {
+  background: #e5f2ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tint-6 {
+  background: #bfdfff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tint-5 {
+  background: #99cbff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tint-4 {
+  background: #72b8ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tint-3 {
+  background: #4ca5ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tint-2 {
+  background: #2692ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tint-1 {
+  background: #007fff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tone-7 {
+  background: #737f8c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tone-6 {
+  background: #607f9f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tone-5 {
+  background: #4c7fb2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tone-4 {
+  background: #397fc5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tone-3 {
+  background: #267fd8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tone-2 {
+  background: #137feb;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .tone-1 {
+  background: #007fff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .shade-7 {
+  background: #000c19;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .shade-6 {
+  background: #001f3f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .shade-5 {
+  background: #003266;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .shade-4 {
+  background: #00458c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .shade-3 {
+  background: #0058b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .shade-2 {
+  background: #006bd8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .secondaryB .shade-1 {
+  background: #007fff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tint-7 {
+  background: #e5ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tint-6 {
+  background: #bfffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tint-5 {
+  background: #99ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tint-4 {
+  background: #72ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tint-3 {
+  background: #4cffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tint-2 {
+  background: #26ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tint-1 {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tone-7 {
+  background: #738c8c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tone-6 {
+  background: #609f9f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tone-5 {
+  background: #4cb2b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tone-4 {
+  background: #39c5c5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tone-3 {
+  background: #26d8d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tone-2 {
+  background: #13ebeb;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .tone-1 {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .shade-7 {
+  background: #001919;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .shade-6 {
+  background: #003f3f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .shade-5 {
+  background: #006666;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .shade-4 {
+  background: #008c8c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .shade-3 {
+  background: #00b2b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .shade-2 {
+  background: #00d8d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.double-complementary .complementary .shade-1 {
+  background: cyan;
+}
+
+/**
+ * Tetradic Color Scheme
+ */
+/* line 209, ../../sass/colorkit/_color-scheme.scss */
+.tetradic .base .pure-color-swatch {
+  background: red;
+}
+/* line 210, ../../sass/colorkit/_color-scheme.scss */
+.tetradic .secondaryA .pure-color-swatch {
+  background: magenta;
+}
+/* line 211, ../../sass/colorkit/_color-scheme.scss */
+.tetradic .secondaryB .pure-color-swatch {
+  background: lime;
+}
+/* line 212, ../../sass/colorkit/_color-scheme.scss */
+.tetradic .complementary .pure-color-swatch {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tint-7 {
+  background: #ffe5e5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tint-6 {
+  background: #ffbfbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tint-5 {
+  background: #ff9999;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tint-4 {
+  background: #ff7272;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tint-3 {
+  background: #ff4c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tint-2 {
+  background: #ff2626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tint-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tone-7 {
+  background: #8c7373;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tone-6 {
+  background: #9f6060;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tone-5 {
+  background: #b24c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tone-4 {
+  background: #c53939;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tone-3 {
+  background: #d82626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tone-2 {
+  background: #eb1313;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .tone-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .shade-7 {
+  background: #190000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .shade-6 {
+  background: #3f0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .shade-5 {
+  background: #660000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .shade-4 {
+  background: #8c0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .shade-3 {
+  background: #b20000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .shade-2 {
+  background: #d80000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .base .shade-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tint-7 {
+  background: #ffe5ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tint-6 {
+  background: #ffbfff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tint-5 {
+  background: #ff99ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tint-4 {
+  background: #ff72ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tint-3 {
+  background: #ff4cff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tint-2 {
+  background: #ff26ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tint-1 {
+  background: magenta;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tone-7 {
+  background: #8c738c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tone-6 {
+  background: #9f609f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tone-5 {
+  background: #b24cb2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tone-4 {
+  background: #c539c5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tone-3 {
+  background: #d826d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tone-2 {
+  background: #eb13eb;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .tone-1 {
+  background: magenta;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .shade-7 {
+  background: #190019;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .shade-6 {
+  background: #3f003f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .shade-5 {
+  background: #660066;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .shade-4 {
+  background: #8c008c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .shade-3 {
+  background: #b200b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .shade-2 {
+  background: #d800d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryA .shade-1 {
+  background: magenta;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tint-7 {
+  background: #e5ffe5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tint-6 {
+  background: #bfffbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tint-5 {
+  background: #99ff99;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tint-4 {
+  background: #72ff72;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tint-3 {
+  background: #4cff4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tint-2 {
+  background: #26ff26;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tint-1 {
+  background: lime;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tone-7 {
+  background: #738c73;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tone-6 {
+  background: #609f60;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tone-5 {
+  background: #4cb24c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tone-4 {
+  background: #39c539;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tone-3 {
+  background: #26d826;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tone-2 {
+  background: #13eb13;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .tone-1 {
+  background: lime;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .shade-7 {
+  background: #001900;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .shade-6 {
+  background: #003f00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .shade-5 {
+  background: #006600;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .shade-4 {
+  background: #008c00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .shade-3 {
+  background: #00b200;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .shade-2 {
+  background: #00d800;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .secondaryB .shade-1 {
+  background: lime;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tint-7 {
+  background: #e5ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tint-6 {
+  background: #bfffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tint-5 {
+  background: #99ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tint-4 {
+  background: #72ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tint-3 {
+  background: #4cffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tint-2 {
+  background: #26ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tint-1 {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tone-7 {
+  background: #738c8c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tone-6 {
+  background: #609f9f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tone-5 {
+  background: #4cb2b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tone-4 {
+  background: #39c5c5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tone-3 {
+  background: #26d8d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tone-2 {
+  background: #13ebeb;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .tone-1 {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .shade-7 {
+  background: #001919;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .shade-6 {
+  background: #003f3f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .shade-5 {
+  background: #006666;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .shade-4 {
+  background: #008c8c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .shade-3 {
+  background: #00b2b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .shade-2 {
+  background: #00d8d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.tetradic .complementary .shade-1 {
+  background: cyan;
+}
+
+/**
+ * Quadradic Color Scheme
+ */
+/* line 252, ../../sass/colorkit/_color-scheme.scss */
+.quadradic .base .pure-color-swatch {
+  background: red;
+}
+/* line 253, ../../sass/colorkit/_color-scheme.scss */
+.quadradic .secondaryA .pure-color-swatch {
+  background: #80ff00;
+}
+/* line 254, ../../sass/colorkit/_color-scheme.scss */
+.quadradic .secondaryB .pure-color-swatch {
+  background: #7f00ff;
+}
+/* line 255, ../../sass/colorkit/_color-scheme.scss */
+.quadradic .complementary .pure-color-swatch {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tint-7 {
+  background: #ffe5e5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tint-6 {
+  background: #ffbfbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tint-5 {
+  background: #ff9999;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tint-4 {
+  background: #ff7272;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tint-3 {
+  background: #ff4c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tint-2 {
+  background: #ff2626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tint-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tone-7 {
+  background: #8c7373;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tone-6 {
+  background: #9f6060;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tone-5 {
+  background: #b24c4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tone-4 {
+  background: #c53939;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tone-3 {
+  background: #d82626;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tone-2 {
+  background: #eb1313;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .tone-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .shade-7 {
+  background: #190000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .shade-6 {
+  background: #3f0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .shade-5 {
+  background: #660000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .shade-4 {
+  background: #8c0000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .shade-3 {
+  background: #b20000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .shade-2 {
+  background: #d80000;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .base .shade-1 {
+  background: red;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tint-7 {
+  background: #f2ffe5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tint-6 {
+  background: #dfffbf;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tint-5 {
+  background: #ccff99;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tint-4 {
+  background: #b9ff72;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tint-3 {
+  background: #a6ff4c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tint-2 {
+  background: #93ff26;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tint-1 {
+  background: #80ff00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tone-7 {
+  background: #808c73;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tone-6 {
+  background: #809f60;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tone-5 {
+  background: #80b24c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tone-4 {
+  background: #80c539;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tone-3 {
+  background: #80d826;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tone-2 {
+  background: #80eb13;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .tone-1 {
+  background: #80ff00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .shade-7 {
+  background: #0c1900;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .shade-6 {
+  background: #203f00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .shade-5 {
+  background: #336600;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .shade-4 {
+  background: #468c00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .shade-3 {
+  background: #59b200;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .shade-2 {
+  background: #6cd800;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryA .shade-1 {
+  background: #80ff00;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tint-7 {
+  background: #f2e5ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tint-6 {
+  background: #dfbfff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tint-5 {
+  background: #cb99ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tint-4 {
+  background: #b872ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tint-3 {
+  background: #a54cff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tint-2 {
+  background: #9226ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tint-1 {
+  background: #7f00ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tone-7 {
+  background: #7f738c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tone-6 {
+  background: #7f609f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tone-5 {
+  background: #7f4cb2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tone-4 {
+  background: #7f39c5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tone-3 {
+  background: #7f26d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tone-2 {
+  background: #7f13eb;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .tone-1 {
+  background: #7f00ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .shade-7 {
+  background: #0c0019;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .shade-6 {
+  background: #1f003f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .shade-5 {
+  background: #320066;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .shade-4 {
+  background: #45008c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .shade-3 {
+  background: #5800b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .shade-2 {
+  background: #6b00d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .secondaryB .shade-1 {
+  background: #7f00ff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tint-7 {
+  background: #e5ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tint-6 {
+  background: #bfffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tint-5 {
+  background: #99ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tint-4 {
+  background: #72ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tint-3 {
+  background: #4cffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tint-2 {
+  background: #26ffff;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tint-1 {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tone-7 {
+  background: #738c8c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tone-6 {
+  background: #609f9f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tone-5 {
+  background: #4cb2b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tone-4 {
+  background: #39c5c5;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tone-3 {
+  background: #26d8d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tone-2 {
+  background: #13ebeb;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .tone-1 {
+  background: cyan;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .shade-7 {
+  background: #001919;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .shade-6 {
+  background: #003f3f;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .shade-5 {
+  background: #006666;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .shade-4 {
+  background: #008c8c;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .shade-3 {
+  background: #00b2b2;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .shade-2 {
+  background: #00d8d8;
+}
+/* line 186, ../../sass/colorkit/_colorkit.scss */
+.quadradic .complementary .shade-1 {
+  background: cyan;
+}
+
+/**
+ * Swatches
+ */
+/**
+ * Color Swatches
+ */
+/* line 21, ../sass/_color-scheme.scss */
+.swatch-1of1 {
+  width: 100%;
+}
+
+/* line 22, ../sass/_color-scheme.scss */
+.swatch-1of2 {
+  width: 49.75%;
+}
+
+/* line 23, ../sass/_color-scheme.scss */
+.swatch-1of3 {
+  width: 33%;
+}
+
+/* line 24, ../sass/_color-scheme.scss */
+.swatch-1of4 {
+  width: 24.625%;
+}
+
+/* line 25, ../sass/_color-scheme.scss */
+.swatch-1of5 {
+  width: 19.6%;
+}
+
+/* line 26, ../sass/_color-scheme.scss */
+.swatch-1of6, .tint-stack div,
+.tone-stack div,
+.shade-stack div {
+  width: 16.25%;
+}
+
+/* line 27, ../sass/_color-scheme.scss */
+.swatch-1of7 {
+  width: 13.85714%;
+}
+
+/* line 28, ../sass/_color-scheme.scss */
+.swatch-1of8 {
+  width: 12.0625%;
+}
+
+/* line 32, ../sass/_color-scheme.scss */
+.tint-stack,
+.tone-stack,
+.shade-stack {
+  /*@extend %row;*/
+  *zoom: 1;
+}
+/* line 38, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.tint-stack:after,
+.tone-stack:after,
+.shade-stack:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 39, ../sass/_color-scheme.scss */
+.tint-stack div,
+.tone-stack div,
+.shade-stack div {
+  float: left;
+  height: 2em;
+  margin-right: .25em;
+}
+
+/* line 48, ../sass/_color-scheme.scss */
+.tone-stack div,
+.shade-stack div {
+  margin-top: .25em;
+}
+
+/* line 63, ../sass/_color-scheme.scss */
+.color-swatch:last-child {
+  margin-right: 0;
+}
+
+/*
+[class*="tint-"],
+[class*="tone-"],
+[class*="shade-"] { margin-right: $swatch-margin; }
+
+[class*="tint-"]:last-of-type,
+[class*="tone-"]:last-of-type,
+[class*="shade-"]:last-of-type { margin-right: 0; }
+*/
+/* line 77, ../sass/_color-scheme.scss */
+.color-block {
+  border: 4px solid white;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.5%;
+}
+
+/* line 88, ../sass/_color-scheme.scss */
+.pure-color-swatch {
+  height: 6.5em;
+}

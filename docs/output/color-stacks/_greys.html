@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Colorkit</title>
+  
+  <link rel="stylesheet" href="../css/screen.css" />
+
+</head>
+<body>
+
+  <header class="masthead">
+    <h1 class="header">Colorkit</h1>
+    <p class="slogan">A Compass extension for building color schemes in Sass.</p>
+    <img src="images/colorwheel.png" alt="Colorkit" class="logo" />
+  </header>
+
+  <nav class="my-sticky-element">
+    <a href="index.html">Home</a>
+    <a href="color-library.html">Color Library</a>
+    <a href="color-scheme.html">Color Scheme</a>
+    <a href="use.html">Use</a>
+  </nav>
+
+<!-- section "greys" -->
+  <h1>Greys</h1>
+  <table class="tint-stack">
+    <thead>
+      <tr><td>grey Tint Stack</td></tr>
+      <tr>
+        <th>Color</th>
+        <th>Variable</th>
+        <th>Hex Code</th>       
+      </tr>
+    </thead> 
+    <tbody>
+      <tr>
+        <td style="background: #808080;"></td>
+        <td>$grey</td>
+        <td>#808080</td>
+      </tr>
+      <tr>
+        <td style="background: #939393;"></td>
+        <td>$grey--tint-1</td>
+        <td>#939393</td>
+      </tr>  
+      <tr>
+        <td style="background: #A6A6A6;"></td>
+        <td>$grey--tint-2</td>
+        <td>#A6A6A6</td>
+      </tr>  
+      <tr>
+        <td style="background: #B9B9B9;"></td>
+        <td>$grey--tint-3</td>
+        <td>#B9B9B9</td>
+      </tr>  
+      <tr>
+        <td style="background: #CCCCCC;"></td>
+        <td>$grey--tint-4</td>
+        <td>#CCCCCC</td>
+      </tr>  
+      <tr>
+        <td style="background: #DFDFDF;"></td>
+        <td>$grey--tint-5</td>
+        <td>#DFDFDF</td>
+      </tr>  
+      <tr>
+        <td style="background: #F2F2F2;"></td>
+        <td>$grey--tint-6</td>
+        <td>#F2F2F2</td>
+      </tr>  
+
+    </tbody>
+  </table>
+
+  <table class="shade-stack">
+    <thead>
+      <tr><td>Grey Shade Stack</td></tr>
+      <tr>
+        <th>Color</th>
+        <th>Variable</th>
+        <th>Hex Code</th>       
+      </tr>
+    </thead> 
+    <tbody>
+      <tr>
+        <td style="background: #808080;"></td>
+        <td>$grey</td>
+        <td>#808080</td>
+      </tr>
+      <tr>
+        <td style="background: #6C6C6C;"></td>
+        <td>$grey--shade-1</td>
+        <td>#6C6C6C</td>
+      </tr>  
+      <tr>
+        <td style="background: #595959;"></td>
+        <td>$grey--shade-2</td>
+        <td>#595959</td>
+      </tr>  
+      <tr>
+        <td style="background: #464646;"></td>
+        <td>$grey--shade-3</td>
+        <td>#464646</td>
+      </tr>  
+      <tr>
+        <td style="background: #333333;"></td>
+        <td>$grey--shade-4</td>
+        <td>#333333</td>
+      </tr>  
+      <tr>
+        <td style="background: #202020;"></td>
+        <td>$grey--shade-5</td>
+        <td>#202020</td>
+      </tr>  
+      <tr>
+        <td style="background:#0C0C0C;"></td>
+        <td>$grey--shade-6</td>
+        <td>#0C0C0C</td>
+      </tr>  
+
+    </tbody>
+  </table>
+
+
+  
+  <!-- section "end" -->
+
+
+<footer class="footer">
+  <nav>
+    navigation goes here...
+  </nav>
+  <section>
+    Built by Kwale<br />
+    Docs powered by <a href="dexy.it">Dexy</a>
+  </section>
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="js/vendor/waypoints.min.js"></script>
+<script src="js/vendor/waypoints-sticky.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.my-sticky-element').waypoint('sticky');
+});
+</script>
+</body>
+</html>
