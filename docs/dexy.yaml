@@ -1,0 +1,10 @@
+.html|hd|ft|jinja:
+  - descriptions.md|pandoc|htmlsections
+  - color-stacks/_*.html|htmlsections
+  - color-schemes/_*.html|htmlsections
+  - _header.html|jinja
+  - _*.html
+
+assests:
+  - .png
+  - .css
