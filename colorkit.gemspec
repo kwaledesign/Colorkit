@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.4.4"
+  s.version = "0.4.5"
   s.date = "2013-06-22"
 
   # Gem Details
@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://wwww.kwaledesign.com"
 
   # Gem Files
-  s.files = %w(README.md)
+  s.files = %w(README.md LICENSE)
   s.files += Dir.glob("lib/**/*.*")
   s.files += Dir.glob("stylesheets/**/*.*")
   s.files += Dir.glob("templates/**/*.*")
