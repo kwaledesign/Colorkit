@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head -%}
+{% include 'includes/_head.html' -%}
+{% endblock %}
+<body class="container">
+
+  <header class="masthead">
+    <h1 class="header">Colorkit</h1>
+    <p class="slogan">A Compass extension for building color schemes in Sass.</p>
+    <img src="images/colorwheel.png" alt="Colorkit" class="logo" />
+  </header>
+
+  <nav class="my-sticky-element">
+    <a href="index.html">Home</a>
+    <a href="color-library.html">Color Library</a>
+    <a href="color-scheme.html">Color Scheme</a>
+    <a href="use.html">Use</a>
+  </nav>
+
+  {% block page -%}
+  <div class="page">
+    {{ content }}
+  </div>
+  {% endblock %}
+  {% block footer -%}
+  {% include 'includes/_footer.html' %}
+  {%- endblock %}
+</body>
+</html>

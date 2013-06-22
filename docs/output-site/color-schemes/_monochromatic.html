@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> Monochromatic</title>
+    
+    <link rel="stylesheet" href="../css/screen.css" media="screen">
+</head>
+<body class="container">
+
+  <header class="masthead">
+    <h1 class="header">Colorkit</h1>
+    <p class="slogan">A Compass extension for building color schemes in Sass.</p>
+    <img src="images/colorwheel.png" alt="Colorkit" class="logo" />
+  </header>
+
+  <nav class="my-sticky-element">
+    <a href="index.html">Home</a>
+    <a href="color-library.html">Color Library</a>
+    <a href="color-scheme.html">Color Scheme</a>
+    <a href="use.html">Use</a>
+  </nav>
+
+  <div class="page">
+    <h2>Monochromatic Color Scheme</h2>
+<div class="monochromatic color-pallet">
+
+  <div class="base color-block">
+
+    <div class="pure-color-swatch"></div>
+    
+    <div class="color-swatch">
+
+      <div class="tint-stack">
+        <div class="tint-1"></div>
+        <div class="tint-2"></div>
+        <div class="tint-3"></div>
+        <div class="tint-4"></div>
+        <div class="tint-5"></div>
+        <div class="tint-6"></div>
+      </div>
+  
+      <div class="tone-stack">
+        <div class="tone-1"></div>
+        <div class="tone-2"></div>
+        <div class="tone-3"></div>
+        <div class="tone-4"></div>
+        <div class="tone-5"></div>
+        <div class="tone-6"></div>
+      </div>
+
+      <div class="shade-stack">
+        <div class="shade-1"></div>
+        <div class="shade-2"></div>
+        <div class="shade-3"></div>
+        <div class="shade-4"></div>
+        <div class="shade-5"></div>
+        <div class="shade-6"></div>
+      </div>
+    
+    </div> <!-- end color-swatch -->
+  </div> <!-- end base color-block -->
+
+</div> <!-- end monochromatic color-pallet -->
+
+  </div>
+  
+  <footer class="footer">
+  <nav>
+    navigation goes here...
+  </nav>
+  <section>
+    Built by Kwale<br />
+    Docs powered by <a href="dexy.it">Dexy</a>
+  </section>
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="js/vendor/waypoints.min.js"></script>
+<script src="js/vendor/waypoints-sticky.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.my-sticky-element').waypoint('sticky');
+});
+</script>
+</body>
+</html>
+</body>
+</html>
