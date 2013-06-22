@@ -1,10 +1,12 @@
-.html|hd|ft|jinja:
-  - descriptions.md|pandoc|htmlsections
-  - color-stacks/_*.html|htmlsections
-  - color-schemes/_*.html|htmlsections
-  - _header.html|jinja
-  - _*.html
+site:
+  - .md|jinja|pandoc:
+    - pandoc: { args: '-t html5' }
+    - .html|htmlsections
+    - .scss|idio
 
-assests:
-  - .png
+assets:
   - .css
+  - .js
+  - .png
+  - .jpg
+
