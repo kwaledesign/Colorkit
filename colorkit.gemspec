@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.4.1"
-  s.date = "2013-06-21"
+  s.version = "0.4.2"
+  s.date = "2013-06-22"
 
   # Gem Details
   s.name = "colorkit"
