@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.4.3"
+  s.version = "0.4.4"
   s.date = "2013-06-22"
 
   # Gem Details
