@@ -1,2 +1,6 @@
 .DS_Store
 .sass-cache/
+docs/.cache
+docs/.sass-cache
+docs/logs
+docs/ouput-long
