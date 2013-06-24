@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Color Library</title>
-    
-    <link rel="stylesheet" href="../css/screen.css" media="screen">
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Color Library</title>
+  
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../css/screen.css" media="screen">
 </head>
 <body class="container">
 
@@ -30,7 +32,7 @@ Color Library
 Colorkit's default color library is based off the primary colors red, yellow, and blue keywords <a href="http://www.w3.org/TR/SVG/types.html#ColorKeywords">defined in SVG</a> and referenced in the <a href="http://www.w3.org/TR/css3-color/#svg-color">Level 3 CSS Color Module</a>. Secondary and tertiary colors are derived in equal parts using <a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#mix-instance_method">Sass's mix function</a>. Each of these key-colors are then used in Colorkit's tint-stack, tone-stack, and shade-stack fucntions to produce the vaule stacks below. Each of these color swaches is given a variable name based of the <a href="http://bem.info">BEM</a> naming methodology, as defined <a href="https://github.com/kwaledesign/CSS-Styleguide">here</a>, in the form of: <code>$color-name--value-name</code>.
 </p>
 
-
+<h2 id="reds">Reds</h2>
 
 <table class="tint-stack">
     <thead>
@@ -296,10 +298,7 @@ $red--shade-6
 
 
 
-
-<h1>
-Red-Oranges
-</h1>
+<h2 id="red-oranges">Red-Oranges</h2>
 <table class="tint-stack">
     <thead>
       <tr><td>
@@ -566,11 +565,9 @@ $red-orange--shade-6
 
 
 
+<h2 id="oranges">Oranges</h2>
 
-<h1>
-Oranges
-</h1>
-  <table class="tint-stack">
+<table class="tint-stack">
     <thead>
       <tr><td>
 Orange Tint Stack
@@ -836,11 +833,9 @@ $orange--shade-6
 
 
 
+<h2 id="yellow-oranges">Yellow-Oranges</h2>
 
-<h1>
-Yellow-Oranges
-</h1>
-  <table class="tint-stack">
+<table class="tint-stack">
     <thead>
       <tr><td>
 Yellow-Orange Tint Stack
@@ -1105,11 +1100,9 @@ $yellow-orange--shade-6
 
 
 
+<h2 id="yellows">Yellows</h2>
 
-<h1>
-Yellows
-</h1>
- <table class="tint-stack">
+<table class="tint-stack">
     <thead>
       <tr><td>
 Yellow Tint Stack
@@ -1373,11 +1366,9 @@ $yellow--shade-6
 
 
 
+<h2 id="yellow-greens">Yellow-Greens</h2>
 
-<h1>
-Yellow-Greens
-</h1>
-   <table class="tint-stack">
+<table class="tint-stack">
     <thead>
       <tr><td>
 Yellow-Green Tint Stack
@@ -1643,11 +1634,7 @@ $yellow-green--shade-6
 
 
 
-
-<h1>
-Greens
-</h1>
-  
+<h2 id="greens">Greens</h2>
 
 <table class="tint-stack">
     <thead>
@@ -1913,11 +1900,7 @@ $green--shade-6
 
 
 
-
-<h1>
-Blue-Greens
-</h1>
-
+<h2 id="blue-greens">Blue-Greens</h2>
 
 <table class="tint-stack">
     <thead>
@@ -2182,11 +2165,9 @@ $blue-green--shade-6
 
 
 
+<h2 id="blues">Blues</h2>
 
-<h1>
-Blues
-</h1>
-  <table class="tint-stack">
+<table class="tint-stack">
     <thead>
       <tr><td>
 blue Tint Stack
@@ -2450,11 +2431,9 @@ $blue--shade-6
 
 
 
+<h2 id="blue-violets">Blue-Violets</h2>
 
-<h1>
-Blue-Violets
-</h1>
-   <table class="tint-stack">
+<table class="tint-stack">
     <thead>
       <tr><td>
 Blue-Violet Tint Stack
@@ -2718,11 +2697,9 @@ $blue-violet--shade-6
 
 
 
+<h2 id="violets">Violets</h2>
 
-<h1>
-Violets
-</h1>
-  <table class="tint-stack">
+<table class="tint-stack">
     <thead>
       <tr><td>
 Violet Tint Stack
@@ -2987,11 +2964,9 @@ $violet--shade-6
 
 
 
+<h2 id="red-violets">Red-Violets</h2>
 
-<h1>
-Red-Violets
-</h1>
-  <table class="tint-stack">
+<table class="tint-stack">
     <thead>
       <tr><td>
 Red-Violet Tint Stack
@@ -3257,93 +3232,54 @@ $red-violet--shade-6
 
 
 
+<h2 id="browns">Browns</h2>
+<pre><code>&lt;table class=&quot;tint-stack&quot;&gt;
+&lt;thead&gt;
+  &lt;tr&gt;&lt;td&gt;Brown Tint Stack&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Color&lt;/th&gt;
+    &lt;th&gt;Variable&lt;/th&gt;
+    &lt;th&gt;Hex Code&lt;/th&gt;       
+  &lt;/tr&gt;
+&lt;/thead&gt; 
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td style=&quot;background: #A52A2A;&quot;&gt;&lt;/td&gt;
+    &lt;td&gt;&amp;#36;brown&lt;/td&gt;
+    &lt;td&gt;#A52A2A&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td style=&quot;background: #B24949;&quot;&gt;&lt;/td&gt;
+    &lt;td&gt;&amp;#36;brown--tint-1&lt;/td&gt;
+    &lt;td&gt;#B24949&lt;/td&gt;
+  &lt;/tr&gt;  
+  &lt;tr&gt;
+    &lt;td style=&quot;background: #C06969;&quot;&gt;&lt;/td&gt;
+    &lt;td&gt;&amp;#36;brown--tint-2&lt;/td&gt;
+    &lt;td&gt;#C06969&lt;/td&gt;
+  &lt;/tr&gt;  
+  &lt;tr&gt;
+    &lt;td style=&quot;background: #CD8989;&quot;&gt;&lt;/td&gt;
+    &lt;td&gt;&amp;#36;brown--tint-3&lt;/td&gt;
+    &lt;td&gt;#CD8989&lt;/td&gt;
+  &lt;/tr&gt;  
+  &lt;tr&gt;
+    &lt;td style=&quot;background: #DBA9A9;&quot;&gt;&lt;/td&gt;
+    &lt;td&gt;&amp;#36;brown--tint-4&lt;/td&gt;
+    &lt;td&gt;#DBA9A9&lt;/td&gt;
+  &lt;/tr&gt;  
+  &lt;tr&gt;
+    &lt;td style=&quot;background: #E8C9C9;&quot;&gt;&lt;/td&gt;
+    &lt;td&gt;&amp;#36;brown--tint-5&lt;/td&gt;
+    &lt;td&gt;#E8C9C9&lt;/td&gt;
+  &lt;/tr&gt;  
+  &lt;tr&gt;
+    &lt;td style=&quot;background: #F6E9E9;&quot;&gt;&lt;/td&gt;
+    &lt;td&gt;&amp;#36;brown--tint-6&lt;/td&gt;
+    &lt;td&gt;#F6E9E9&lt;/td&gt;
+  &lt;/tr&gt;  
 
-<h1>
-Browns
-</h1>
-    <table class="tint-stack">
-    <thead>
-      <tr><td>
-Brown Tint Stack
-</td></tr>
-      <tr>
-        <th>
-Color
-</th>
-        <th>
-Variable
-</th>
-        <th>
-Hex Code
-</th>       
-      </tr>
-    </thead> 
-    <tbody>
-      <tr>
-        <td style="background: #A52A2A;"></td>
-        <td>
-$brown
-</td>
-        <td>
-#A52A2A
-</td>
-      </tr>
-      <tr>
-        <td style="background: #B24949;"></td>
-        <td>
-$brown--tint-1
-</td>
-        <td>
-#B24949
-</td>
-      </tr>  
-      <tr>
-        <td style="background: #C06969;"></td>
-        <td>
-$brown--tint-2
-</td>
-        <td>
-#C06969
-</td>
-      </tr>  
-      <tr>
-        <td style="background: #CD8989;"></td>
-        <td>
-$brown--tint-3
-</td>
-        <td>
-#CD8989
-</td>
-      </tr>  
-      <tr>
-        <td style="background: #DBA9A9;"></td>
-        <td>
-$brown--tint-4
-</td>
-        <td>
-#DBA9A9
-</td>
-      </tr>  
-      <tr>
-        <td style="background: #E8C9C9;"></td>
-        <td>
-$brown--tint-5
-</td>
-        <td>
-#E8C9C9
-</td>
-      </tr>  
-      <tr>
-        <td style="background: #F6E9E9;"></td>
-        <td>
-$brown--tint-6
-</td>
-        <td>
-#F6E9E9
-</td>
-      </tr>  
-
-<pre><code>&lt;/tbody&gt;</code></pre>
+&lt;/tbody&gt;</code></pre>
 
 </table>
 
@@ -3527,14 +3463,12 @@ $brown--shade-6
 
 
 
+<h2 id="grays">Grays</h2>
 
-<h1>
-Greys
-</h1>
-  <table class="tint-stack">
+<table class="tint-stack">
     <thead>
       <tr><td>
-grey Tint Stack
+gray Tint Stack
 </td></tr>
       <tr>
         <th>
@@ -3552,7 +3486,7 @@ Hex Code
       <tr>
         <td style="background: #808080;"></td>
         <td>
-$grey
+$gray
 </td>
         <td>
 #808080
@@ -3561,7 +3495,7 @@ $grey
       <tr>
         <td style="background: #939393;"></td>
         <td>
-$grey--tint-1
+$gray--tint-1
 </td>
         <td>
 #939393
@@ -3570,7 +3504,7 @@ $grey--tint-1
       <tr>
         <td style="background: #A6A6A6;"></td>
         <td>
-$grey--tint-2
+$gray--tint-2
 </td>
         <td>
 #A6A6A6
@@ -3579,7 +3513,7 @@ $grey--tint-2
       <tr>
         <td style="background: #B9B9B9;"></td>
         <td>
-$grey--tint-3
+$gray--tint-3
 </td>
         <td>
 #B9B9B9
@@ -3588,7 +3522,7 @@ $grey--tint-3
       <tr>
         <td style="background: #CCCCCC;"></td>
         <td>
-$grey--tint-4
+$gray--tint-4
 </td>
         <td>
 #CCCCCC
@@ -3597,7 +3531,7 @@ $grey--tint-4
       <tr>
         <td style="background: #DFDFDF;"></td>
         <td>
-$grey--tint-5
+$gray--tint-5
 </td>
         <td>
 #DFDFDF
@@ -3606,7 +3540,7 @@ $grey--tint-5
       <tr>
         <td style="background: #F2F2F2;"></td>
         <td>
-$grey--tint-6
+$gray--tint-6
 </td>
         <td>
 #F2F2F2
@@ -3621,7 +3555,7 @@ $grey--tint-6
 <table class="shade-stack">
     <thead>
       <tr><td>
-Grey Shade Stack
+gray Shade Stack
 </td></tr>
       <tr>
         <th>
@@ -3639,7 +3573,7 @@ Hex Code
       <tr>
         <td style="background: #808080;"></td>
         <td>
-$grey
+$gray
 </td>
         <td>
 #808080
@@ -3648,7 +3582,7 @@ $grey
       <tr>
         <td style="background: #6C6C6C;"></td>
         <td>
-$grey--shade-1
+$gray--shade-1
 </td>
         <td>
 #6C6C6C
@@ -3657,7 +3591,7 @@ $grey--shade-1
       <tr>
         <td style="background: #595959;"></td>
         <td>
-$grey--shade-2
+$gray--shade-2
 </td>
         <td>
 #595959
@@ -3666,7 +3600,7 @@ $grey--shade-2
       <tr>
         <td style="background: #464646;"></td>
         <td>
-$grey--shade-3
+$gray--shade-3
 </td>
         <td>
 #464646
@@ -3675,7 +3609,7 @@ $grey--shade-3
       <tr>
         <td style="background: #333333;"></td>
         <td>
-$grey--shade-4
+$gray--shade-4
 </td>
         <td>
 #333333
@@ -3684,7 +3618,7 @@ $grey--shade-4
       <tr>
         <td style="background: #202020;"></td>
         <td>
-$grey--shade-5
+$gray--shade-5
 </td>
         <td>
 #202020
@@ -3693,7 +3627,7 @@ $grey--shade-5
       <tr>
         <td style="background:#0C0C0C;"></td>
         <td>
-$grey--shade-6
+$gray--shade-6
 </td>
         <td>
 #0C0C0C
@@ -3703,6 +3637,7 @@ $grey--shade-6
 <pre><code>&lt;/tbody&gt;</code></pre>
 
 </table>
+
 
 
 
@@ -3725,6 +3660,7 @@ $grey--shade-6
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script src="js/vendor/waypoints.min.js"></script>
 <script src="js/vendor/waypoints-sticky.min.js"></script>
+<script src="js/init.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
