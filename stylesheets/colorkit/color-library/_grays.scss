@@ -1,43 +1,43 @@
 /**
- * Greys
+ * grays
  * 
  */
 
-$grey: #808080 !default;
+$gray: #808080 !default;
 
 /**
  * Tints
  */
-$grey--tint-stack: tint-stack($grey, $sixths);
+$gray--tint-stack: tint-stack($gray, $sixths);
 
-$grey--tint-1: nth($grey--tint-stack, 2);
-$grey--tint-2: nth($grey--tint-stack, 3);
-$grey--tint-3: nth($grey--tint-stack, 4);
-$grey--tint-4: nth($grey--tint-stack, 5);
-$grey--tint-5: nth($grey--tint-stack, 6);
-$grey--tint-6: nth($grey--tint-stack, 7);
+$gray--tint-1: nth($gray--tint-stack, 2);
+$gray--tint-2: nth($gray--tint-stack, 3);
+$gray--tint-3: nth($gray--tint-stack, 4);
+$gray--tint-4: nth($gray--tint-stack, 5);
+$gray--tint-5: nth($gray--tint-stack, 6);
+$gray--tint-6: nth($gray--tint-stack, 7);
 
 /**
  * Tones
  */
-$grey--tone-stack: tone-stack($grey, $sixths);
+$gray--tone-stack: tone-stack($gray, $sixths);
 
-$grey--tone-1: nth($grey--tone-stack, 2);
-$grey--tone-2: nth($grey--tone-stack, 3);
-$grey--tone-3: nth($grey--tone-stack, 4);
-$grey--tone-4: nth($grey--tone-stack, 5);
-$grey--tone-5: nth($grey--tone-stack, 6);
-$grey--tone-6: nth($grey--tone-stack, 7);
+$gray--tone-1: nth($gray--tone-stack, 2);
+$gray--tone-2: nth($gray--tone-stack, 3);
+$gray--tone-3: nth($gray--tone-stack, 4);
+$gray--tone-4: nth($gray--tone-stack, 5);
+$gray--tone-5: nth($gray--tone-stack, 6);
+$gray--tone-6: nth($gray--tone-stack, 7);
 
 /**
  * Shades
  */
-$grey--shade-stack: shade-stack($grey, $sixths);
+$gray--shade-stack: shade-stack($gray, $sixths);
 
-$grey--shade-1: nth($grey--shade-stack, 2);
-$grey--shade-2: nth($grey--shade-stack, 3);
-$grey--shade-3: nth($grey--shade-stack, 4);
-$grey--shade-4: nth($grey--shade-stack, 5);
-$grey--shade-5: nth($grey--shade-stack, 6);
-$grey--shade-6: nth($grey--shade-stack, 7);
+$gray--shade-1: nth($gray--shade-stack, 2);
+$gray--shade-2: nth($gray--shade-stack, 3);
+$gray--shade-3: nth($gray--shade-stack, 4);
+$gray--shade-4: nth($gray--shade-stack, 5);
+$gray--shade-5: nth($gray--shade-stack, 6);
+$gray--shade-6: nth($gray--shade-stack, 7);
 
