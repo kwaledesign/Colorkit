@@ -1,0 +1,152 @@
+  <table class="table table--striped tint-stack">
+    <thead>
+      <tr><td>Orange Tint Stack</td></tr>
+      <tr>
+        <th>Color</th>
+        <th>Variable</th>
+        <th>Hex Code</th>       
+      </tr>
+    </thead> 
+    <tbody>
+      <tr>
+        <td style="background: #FFA500;"></td>
+        <td>&#36;orange</td>
+        <td>#FFA500</td>
+      </tr>
+      <tr>
+        <td style="background: #FFB226;"></td>
+        <td>&#36;orange--tint-1</td>
+        <td>#FFB226</td>
+      </tr>  
+      <tr>
+        <td style="background: #FFC04C;"></td>
+        <td>&#36;orange--tint-2</td>
+        <td>#FFC04C</td>
+      </tr>  
+      <tr>
+        <td style="background: #FFCD72;"></td>
+        <td>&#36;orange--tint-3</td>
+        <td>#FFCD72</td>
+      </tr>  
+      <tr>
+        <td style="background: #FFDB99;"></td>
+        <td>&#36;orange--tint-4</td>
+        <td>#FFDB99</td>
+      </tr>  
+      <tr>
+        <td style="background: #FFE8BF;"></td>
+        <td>&#36;orange--tint-5</td>
+        <td>#FFE8BF</td>
+      </tr>  
+      <tr>
+        <td style="background: #FFF6E5;"></td>
+        <td>&#36;orange--tint-6</td>
+        <td>#FFF6E5</td>
+      </tr>  
+
+    </tbody>
+  </table>
+
+  <table class="table table--striped tone-stack">
+    <thead>
+      <tr><td>Orange Tone Stack</td></tr>
+      <tr>
+        <th>Color</th>
+        <th>Variable</th>
+        <th>Hex Code</th>       
+      </tr>
+    </thead> 
+    <tbody>
+      <tr>
+        <td style="background: #FFA500;"></td>
+        <td>&#36;orange</td>
+        <td>#FFA500</td>
+      </tr>
+      <tr>
+        <td style="background: #EB9F13;"></td>
+        <td>&#36;orange--tone-1</td>
+        <td>#EB9F13</td>
+      </tr>  
+      <tr>
+        <td style="background: #D89926;"></td>
+        <td>&#36;orange--tone-2</td>
+        <td>#D89926</td>
+      </tr>  
+      <tr>
+        <td style="background: #C59439;"></td>
+        <td>&#36;orange--tone-3</td>
+        <td>#C59439</td>
+      </tr>  
+      <tr>
+        <td style="background: #B28E4C;"></td>
+        <td>&#36;orange--tone-4</td>
+        <td>#B28E4C</td>
+      </tr>  
+      <tr>
+        <td style="background: #9F8960;"></td>
+        <td>&#36;orange--tone-5</td>
+        <td>#9F8960</td>
+      </tr>  
+      <tr>
+        <td style="background: #8C8373;"></td>
+        <td>&#36;orange--tone-6</td>
+        <td>#8C8373</td>
+      </tr>  
+
+    </tbody>
+  </table>
+
+
+  <table class="table table--striped shade-stack">
+    <thead>
+      <tr><td>Orange Shade Stack</td></tr>
+      <tr>
+        <th>Color</th>
+        <th>Variable</th>
+        <th>Hex Code</th>       
+      </tr>
+    </thead> 
+    <tbody>
+      <tr>
+        <td style="background: #FFA500;"></td>
+        <td>&#36;orange</td>
+        <td>#FFA500</td>
+      </tr>
+      <tr>
+        <td style="background: #D88C00;"></td>
+        <td>&#36;orange--shade-1</td>
+        <td>#D88C00</td>
+      </tr>  
+      <tr>
+        <td style="background: #B27300;"></td>
+        <td>&#36;orange--shade-2</td>
+        <td>#B27300</td>
+      </tr>  
+      <tr>
+        <td style="background: #8C5A00;"></td>
+        <td>&#36;orange--shade-3</td>
+        <td>#8C5A00</td>
+      </tr>  
+      <tr>
+        <td style="background: #664200;"></td>
+        <td>&#36;orange--shade-4</td>
+        <td>#664200</td>
+      </tr>  
+      <tr>
+        <td style="background: #3F2900;"></td>
+        <td>&#36;orange--shade-5</td>
+        <td>#3F2900</td>
+      </tr>  
+      <tr>
+        <td style="background:#191000;"></td>
+        <td>&#36;orange--shade-6</td>
+        <td>#191000</td>
+      </tr>  
+
+    </tbody>
+  </table>
+
+
+
+  
+  
