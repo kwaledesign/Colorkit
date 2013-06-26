@@ -1,8 +1,12 @@
-#require 'archetype'
-#require 'susy'
-#require 'modular-scale'
-# Require any additional compass plugins here.
+require 'archetype'
+require 'colorkit'
+require 'modular-scale'
+require 'breakpoint'
+require 'singularitygs'
+require 'singularity-extras'
+# require 'susy'
 
+# Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
 http_path = "/"
