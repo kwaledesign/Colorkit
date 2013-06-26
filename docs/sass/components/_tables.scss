@@ -123,7 +123,7 @@ table {
 /**
  * Table Zebra Stripes
  */
-.table--srtriped  tbody {
+.table--striped  tbody {
   > tr:nth-child(odd) > td,
   > tr:nth-child(odd) > th {
     background-color: $table--stripe-color;
