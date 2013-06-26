@@ -7,9 +7,9 @@
 /**
  * Table Variables
  */
-$table--color-bg:                                                       $muted-color--bg;
+$table--color-bg:                                                       $white;  //$muted-color--bg;
 
-$table--border-radius:                                                  4px;         //$global__border-radius;
+$table--border-radius:                                                  4px;  //$global__border-radius;
 $table--border:                                                         1px solid #333;
 $table--color-bg-hover:                                                 darken(#D5D5E5, 5%);
 $table--stripe-color:                                                   darken($table--color-bg, 10%);
@@ -18,12 +18,12 @@ $table--color-bg-success:                                               lighten(
 $table--color-bg-error:                                                 lighten(red, 30%);
 $table--color-bg-warning:                                               lighten(yellow, 30%);
 
-$table--color-border:                                                   $strong-color--bg;
+$table--color-border:                                                   darken($white, 25%); //$strong-color--bg;
 $table--border:                                                         1px solid $table--color-border;
 $table--head-color-bg:                                                  $subtle-color--bg;
 
 /* zebra striping (even rows) */
-$table--zebra-color-bg:                                                  $muted-color--bg;
+$table--zebra-color-bg:                                                  darken($white, 10%); //$muted-color--bg;
 $table--footer-color-bg:                                                 $subtle-color--bg;
  
 $table--header-text:                                                     $strong-color--txt;

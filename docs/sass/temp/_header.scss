@@ -1,22 +1,17 @@
-.my-sticky-element.stuck {
-  position:fixed;
-  top:0;
-  box-shadow:0 2px 4px rgba(0, 0, 0, .3);
-}
-.my-sticky-element {
-  background-color: #CCC;
-  padding: 10px;
-  text-align: center;
-}
+/**
+ * Header
+ * 
+ */
+
 .masthead {
   padding-top: 8em;
   padding-bottom: 2em;
   margin: 0;
   position: relative;
-  z-index: -2;
   text-align: center;
   background: #DFDFDF;
 }
+
 .header {
   color: #FFF;
   text-shadow: 0px 2px 2px #222;
@@ -29,7 +24,14 @@
   left:50%;
   margin-left: -100px;
   margin-right: -100px;
+  z-index: 2;
 }
+
+.slogan {
+  z-index: 2;
+  color: #222;
+}
+
 .logo {
   width: 200px;
   height: 200px; 
@@ -39,13 +41,4 @@
   margin-left: -100px;
   margin-right: -100px;
   opacity: .75;
-  z-index: -1;
 }
-.slogan {
-  color: #222;
-}
-.footer {
-  padding: 2em 0 2 em 0;
-  background-color: #222;
-}
-
