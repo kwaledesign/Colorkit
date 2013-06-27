@@ -29,6 +29,10 @@
   pre {
     margin: 0 auto rhythm(1);                       /* 1 */
     font-family: $monospace;
+    border-radius: $radius-unit--small;
+    background: black(20);
+    color: white(20);
+    padding: 1em;
   }
 }
 
