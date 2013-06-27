@@ -1,0 +1,633 @@
+/**
+ * Navigation
+ * 
+ */
+
+.my-sticky-element.stuck {
+  position:fixed;
+  top:0;
+  box-shadow:0 2px 4px rgba(0, 0, 0, .3);
+}
+
+.my-sticky-element {
+  background-color: #CCC;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+/**
+ * Variables
+ */
+$base-line-height: 24px;
+$link-color: blue;
+$link-color-visited: purple;
+$link-color-hover: dark-blue;
+$link-color-focus: $link-color-hover;
+$shinyEdge: white;
+$mainColor: #333;
+$white: white;
+$secondaryColor: #666;
+ 
+/**
+ * CSS Triangles
+ * 
+ * .example { @include cssTriangle(5px, #fff, bottom); }
+ */
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid   $triangleSize;
+  @if ($triangleDirection == down) {
+    border-color: $triangleColor transparent transparent transparent;
+  }
+  @if ($triangleDirection == up) {
+    border-color: transparent transparent $triangleColor transparent;
+  }
+  @if ($triangleDirection == right) {
+    border-color: transparent transparent transparent $triangleColor;
+  }
+  @if ($triangleDirection == left) {
+    border-color: transparent $triangleColor transparent transparent;
+  }
+}
+ 
+/**
+ * Color Helpers
+ * 
+ * return opapue/alpha grey scale
+ */
+// gray-scale (opaque)
+@function black($tint) {
+	@return lighten(#000, $tint);
+}
+ 
+@function white($shade) {
+	@return darken(#FFF, $shade);
+}
+ 
+// gray-scale (alpha) 
+@function alpha-black($opacity) {
+  @return rgba(0,0,0,$opacity);
+}
+ 
+@function alpha-white($opacity) {
+	@return rgba(255,255,255,$opacity);
+}
+
+/**
+ * Black and White
+ */
+$white:                             white(0);
+$black:                             black(0);
+ 
+/**
+ * Shadow and Highlight
+ */
+$highlight-color:                   alpha-white(.5)!default;
+$shadow-color:                      alpha-black(.2) !default;
+ 
+/**
+ * Semantic Utilities
+ *
+ * utility color variables to extend with semantic variable names
+ */
+$strong:                            black(40%) !default;
+$subtle:                            black(80%) !default;
+$muted:                             black(95%) !default;
+ 
+/**
+ * Spacer Units
+ */
+$base-spacer-unit: $base-font-size;
+ 
+$half-spacer-unit: $base-spacer-unit / 2;
+$third-spacer-unit: $base-spacer-unit / 3;
+$quarter-spacer-unit: $base-spacer-unit / 4;
+ 
+$media--spacer: $half-spacer-unit;
+ 
+/**
+ * Radius Unit
+ * 
+ */
+$radius-unit--small: 3px;
+$radius-unit--large: 6px; 
+ 
+/**
+ * Margined Container
+ * 
+ * Adds standard padding unit as side margins
+ */
+%margined-container {
+  margin-left: $base-spacer-unit;
+  margin-right: $base-spacer-unit;
+}
+ 
+/**
+ * Padded Container
+ * 
+ * Adds standard padding unit as side padding
+ */
+%padded-container {
+  padding-left: $base-spacer-unit;
+  padding-right: $base-spacer-unit;
+}
+
+/**
+ * Partition Object
+ * 
+ */
+.partition {
+  display: block;
+  position: relative;
+  @include pie-clearfix;
+}
+ 
+/**
+ * Partitions
+ * 
+ * Extends the partition object
+ */
+ 
+/**
+ * Partition Variables
+ * 
+ * 1. optionally rename structure and skin classes
+ */
+ 
+/* partition Structure Namespace: */
+$small-partition:                     small;      /* 1 */
+$large-partition:                     large;      /* 1 */
+ 
+/* partition Skin Namespace: */
+$primary-partition:                   primary;    /* 1 */
+$secondary-partition:                 secondary;  /* 1 */
+ 
+/**
+ * Partition Structure
+ *
+ * 1. remove bottom padding from last child to avoid redunddant spacing,
+ *    allow child element to define its vertical-spacing within the partition
+ */
+.partition--#{$small-partition} {
+  @extend %padded-container;
+  @extend %margined-container;
+  //padding: $spacing-unit--vertical $spacing-unit--horizontal;
+  //margin: .5em;
+  border-radius: $radius-unit--small;
+  &:last-child {
+    margin-bottom: 0;       /* 1 */
+  }
+}
+ 
+.partition--#{$large-partition} {
+  @extend %extra-padded-container; 
+  @extend %margined-container;
+  //padding: $spacing-unit--vertical $spacing-unit--horizontal;
+  //margin: .5em;
+  border-radius: $radius-unit--large;
+  &:last-child {            /* 1 */
+    margin-bottom: 0;
+  }
+}
+ 
+/**
+ * Partition Skin
+ */
+.partition--#{$primary-partition} {
+  border: 1px solid $subtle;
+  background-color: $muted;
+}
+ 
+.partition--#{$secondary-partition} {
+  border: 1px solid $black;
+  background-color: $strong;
+  color: $muted;
+}
+
+ /**
+ * Navigation
+ *
+ */
+$navbar-height: $base-line-height * 1.5 !default;
+$navFlyoutBaseWidth: 250px !default;
+$navFlyoutBaseWidth-smscreen: 50px;
+ 
+/**
+ * Nav Object
+ */
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include pie-clearfix;
+    & > li { 
+      //float: left; 
+    }
+    & > li > a { 
+      display: inline-block; 
+    }        
+}
+
+/**
+ * Navigation Sturcutre
+ */
+.horizontal a, .vertical a { display: block; }
+ 
+.nav--horizontal > li {
+  display: inline-block;
+}
+.nav--vertical > li {
+  display: list-item; 
+}
+
+// Navigation: 
+// -----------
+/////flybar divider
+$horizontal-flybar-divider-border: 1px solid white(20);
+$horizontal-flybar-divider-border-width: 0 1px 0 0;
+$horizontal-flybar-divider-box-shadow: none;
+ 
+$vertical-flybar-divider-border: 1px solid white(20);
+$vertical-flybar-divider-border-width: 0 0 1px 0;
+$vertical-flybar-divider-box-shadow: none;
+ 
+.horizontal-nav > li,
+.vertical-nav > li {
+  border: $horizontal-flybar-divider-border;
+  box-shadow: $horizontal-flybar-divider-box-shadow;
+  border-width: $horizontal-flybar-divider-border-width;
+    &:last-child {
+      border-right: none;
+  }
+}
+ 
+.vertical-nav > li,
+.vertical-nav > li {
+  border: $vertical-flybar-divider-border; 
+  box-shadow: $vertical-flybar-divider-box-shadow;
+  border-width: $vertical-flybar-divider-border-width;
+  &:last-child {
+    border-bottom: none;
+  } 
+}
+ 
+// Flybar
+// -------------------------------------------------------
+// container object for flyout menus, extends the partition object
+
+.flybar-horizontal {
+}
+.flybar-horizontal.right > ul {
+  text-align: right;
+}
+.flybar-horizontal.centered > ul {
+  text-align: center;
+}
+.flybar-vertical {
+  width: 250px;
+}
+/*
+.nav-bar>li>input { 
+  margin: 0 10px; 
+}
+*/
+
+// ------------------------------------------------------
+// Flyouts
+// ------------------------------------------------------
+
+
+
+// Flyout Structure
+// ------------------------------------------------------
+$flyout-panel-width: 250px;
+ 
+$flybar-alignment: left;
+//$flybar-height: $navbar-height;
+ 
+//$flybar-margin: 0;
+ 
+//$horizontal-flybar-margin: 0 auto;
+//$vertical-flybar-margin: 0;
+//vertical flybar
+//horizontal flybar
+
+// Flyout Skin
+// ------------------------------------------------------
+ 
+$flyout-panel-link-padding: 10px 0 10px 5px;
+ 
+/* flyout links */
+//$flyout-link-color: $link-color;
+//$flyout-link-font-weight: normal;
+//$flyout-link-text-decoration: none;
+/* visited state */
+$flyout-visited-link-color: $link-color-visited;
+/* hover state */
+$flyout-link-hover-text-color: $link-color-hover;
+$flyout-link-hover-bg-color: white(15);
+/* focus state */
+$flyout-link-focus-text-color: $link-color-focus;
+/* active state */ 
+$flyout-link-active-bg-color: white(50);
+/* active state for nested flyouts */
+$flyout-link-active-nested-bg-color: white(15);  // set this equal to $flyout-link-active-bg-color to disable
+ 
+// flyout panel skin
+// -----------------------------------------------------------
+ 
+$flyout-panel-border: 1px solid white(15%);
+$flyout-panel-bg-color: white(5%);
+$flyout-panel-box-shadow: 0 1px 5px rgba(#000, .1);
+ 
+$flyout-panel-link-border: 1px solid white(10%);
+$flyout-panel-link-border-width: 0 0 1px 0;
+$flyout-panel-link-box-shadow: 0 1px 0 $shinyEdge inset;
+ 
+ 
+
+ 
+// Flyout Object
+// --------------
+ 
+.flyout {
+  position:relative; 
+}
+ 
+.flyout-panel {
+  display: none;
+  z-index: 40;
+  position: absolute;
+}
+   
+.flydown {
+  top: $navbar-height - 1; 
+  left: -1px;
+}
+
+/*
+.flyup {
+// flyup
+// flyup-right
+// flyup-left
+}
+*/
+
+.flyright {
+  left: 100%; 
+  top: -1px;
+  /* or:
+  left: $navFlyoutBaseWidth;
+  top: 0;
+  */
+}
+.flyleft {
+  left: auto; 
+  right: 100%;
+}
+
+.flydown-right {
+  top: $navbar-height - 1; 
+  left: -1px;
+  .flyout-panel {
+    left: 100%; 
+    top: -1px;
+    /* or:
+    left: $navFlyoutBaseWidth;
+    top: 0;
+    */
+  }
+  /* if a flyout is pulled-right within a flydown-right, overrid it to a flydown-left */
+  .pull-right .flyout-panel {
+    top: $navbar-height - 1; 
+    //left: -1px;
+    right: 0;
+    .flyout-panel {
+      left: auto; 
+      right: 100%;
+    }
+  }
+}
+
+.flydown-left {
+  top: $navbar-height - 1; 
+  //left: -1px;
+  right: 0;
+  .flyout-panel {
+    left: auto; 
+    right: 100%;
+  }
+}
+
+.flydown-down {
+  top: $navbar-height - 1; 
+  left: -1px;
+}
+
+.flyright-right {
+  left: 100%; 
+  top: -1px;
+  /* or:
+  left: $navFlyoutBaseWidth;
+  top: 0;
+  */
+}
+
+.flyleft-left {
+  right: 100%;
+  top: -1px;
+}
+
+
+// Flyout Structure
+// ------------------------------------------------------
+ 
+.flyout {
+  a { 
+    padding: $flyout-panel-link-padding; 
+  }
+}
+.flyout-panel {
+  width: $flyout-panel-width;
+}
+ 
+// Flyout Skin
+// -----------------------------------
+ 
+
+  .flydown {
+    .flyout-toggle:after {
+      @include cssTriangle(4px, red, down);
+      float: right;
+    }
+  }
+  /*
+  @if $direction == "flyup" {
+    .flyout-toggle:after {
+      @include cssTriangle(4px, red, up); 
+        float: right;
+        top: 0;
+    }
+  }
+  */
+  .flyright {
+    .flyout-toggle:after {
+      @include cssTriangle(4px, red, right);
+      float: right;
+    }
+  }
+  .flyleft {
+    .flyout-toggle:before {
+      @include cssTriangle(4px, red, left);
+      float: left;
+    }
+  }
+  .flydown-right {
+    .flyout-toggle:after {
+      @include cssTriangle(4px, red, down);
+      float: right;
+    }
+    .flyout-panel .flyout-toggle:after {
+      @include cssTriangle(4px, red, right);
+      float: right; 
+    }
+  }
+  .flydown-left {
+    .flyout-toggle:after {
+      @include cssTriangle(4px, red, down);
+      float: right;
+    }
+    .flyout-panel .flyout-toggle:after {
+      @include cssTriangle(4px, red, left);
+      float: right;
+    }
+  }
+ 
+  // flyup skin goes here...
+ 
+  .flydown-down {
+    .flyout-toggle:after {
+      @include cssTriangle(4px, red, down);
+      float: right;
+    }
+  }
+  .flyright-right {
+    .flyout-toggle:after {
+      @include cssTriangle(4px, red, right);
+      float: right;
+    }
+  }
+  .flyleft-left {
+    .flyout-toggle:before {
+      @include cssTriangle(4px, red, left);
+      float: left;
+    }
+  }
+
+ 
+.flyout {
+  // flyout link styles
+  a {
+    color: #444;
+    font-weight: normal;                   
+    text-decoration: none;
+    &:visited { 
+      color: #444; 
+    }
+    &:hover { 
+      color: #222;
+      background: $flyout-link-hover-bg-color; 
+    }
+    &:focus { 
+      color: $flyout-link-focus-text-color; 
+    }
+  }
+  // active flyout link style
+  .active > a {
+    background: $flyout-link-active-bg-color;
+  }
+  // optional override for applying different link styles to active nested flyouts
+  .active .active > a {
+    background: $flyout-link-active-nested-bg-color;
+  }
+  // flyout panel styles
+  .flyout-panel {
+    border: $flyout-panel-border; 
+    background: $flyout-panel-bg-color; 
+    //@include box-shadow($flyout-panel-box-shadow);
+    text-align: left; 
+    // panel borders
+    li {
+      
+        border: $flyout-panel-link-border; 
+        @include box-shadow($flyout-panel-link-box-shadow);
+        border-width: $flyout-panel-link-border-width; 
+      
+      /*@if $panel-style == "plain" {
+        border: none;
+      }*/
+      }
+    &:last-child a {border-bottom: none;}
+  }
+}
+ 
+ 
+// divider skin ?? 
+ 
+/*
+// DISABLED STATES
+// ---------------
+// disable link styles
+.nav > .disabled > a {
+  color: $muted;
+}
+.nav > .disabled > a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  cursor: default;
+}
+*/
+ 
+/* want this for borderless panels? ........ bordered panel = "menu" ???
+  li.divider {                        
+    border-top: 1px solid white(10%);  /////////skin this
+    height: 0; 
+    padding: 0; 
+  }
+  */
+ 
+ 
+ 
+ 
+ 
+// Flyout classes
+// ------------------------------------------------------   
+.flydown {}
+.flyup {}
+.flyright {}
+.flyleft {}
+.flydown-right {}
+.flydown-left {}
+ 
+.flydown-down {}
+.flyright-right {}
+.flyleft-left {}
+ 
+ 
+.pull-right {
+  float: right;  ////// this needs integration....
+}
+.pull-left {
+  float: left;
+}
+ 
+.active > .flyout-panel {
+  display:block;
+}
+ 
+.demo-left {margin-left: 45%;}
