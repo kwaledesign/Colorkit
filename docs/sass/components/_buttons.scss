@@ -31,16 +31,16 @@ $btn__default--color1:                #B3B3B3;
 $btn__default--color2:                darken($btn__default--color1, 10%);
 
 /* Positive Button Skin */
-$btn__positive--color1:               #5B8737;
-$btn__positive--color2:               darken($btn__positive--color1, 10%);
+$btn__positive--color1:               $violet--tone-2;  //#5B8737;
+$btn__positive--color2:               $violet--shade-1;  //darken($btn__positive--color1, 10%);
 
 /* Negative Button Skin */
 $btn__negative--color1:               #E91C21;
 $btn__negative--color2:               darken($btn__negative--color1, 10%);
 
 /* Secondary Button Skin */
-$btn__secondary--color1:              white(10%);
-$btn__secondary--color2:              darken($btn__secondary--color1, 10%);
+$btn__secondary--color1:              $grey--tint-5;  //$yellow-orange--tint-2;  //white(10%);
+$btn__secondary--color2:              $grey--tint-4;  //$yellow-orange--tone-2;  //darken($btn__secondary--color1, 10%);
 
 
 /*** @export "button-structure" css */
@@ -59,7 +59,7 @@ $btn__secondary--color2:              darken($btn__secondary--color1, 10%);
 /**
  * Small Button 
  */
-.btn__#{$small} {
+.btn--#{$small} {
   font-size: ($base-font-size - 4px);
   padding: 2px 6px; //6
   line-height: $base-line-height;//7
@@ -70,7 +70,7 @@ $btn__secondary--color2:              darken($btn__secondary--color1, 10%);
 /**
  * Medium Button 
  */
-.btn__#{$medium} {
+.btn--#{$medium} {
   font-size: ($base-font-size - 2px);
   padding: 5px 9px; //6
   line-height: $base-line-height;//7
@@ -81,7 +81,7 @@ $btn__secondary--color2:              darken($btn__secondary--color1, 10%);
 /**
  * Large Button 
  */
-.btn__#{$large} {
+.btn--#{$large} {
   font-size: ($base-font-size + 2px);
   padding: 9px 14px; //6
   line-height: $base-line-height;//7
@@ -94,8 +94,8 @@ $btn__secondary--color2:              darken($btn__secondary--color1, 10%);
  *
  * full screen, block level button style for small screens 
  */
-.btn__#{$touch} {
-  @extend .btn__#{large};
+.btn--#{$touch} {
+  @extend .btn--#{large};
   display: block;
   width: 100%;
   padding-left: 0;
@@ -117,16 +117,16 @@ $btn__secondary--color2:              darken($btn__secondary--color1, 10%);
   color: $white;
   border: 1px solid $strong;
   &:hover {
-  background-color: $btn__default--color2;
+    background-color: $btn__default--color2;
   }
   &:active,
   &.active {
-  background-color: tint($btn__default--color2, 10%);
+    background-color: tint($btn__default--color2, 10%);
   }
   &.disabled,
   &[disabled] {
-  opacity: 0.6;
-  cursor: default;
+    opacity: 0.6;
+    cursor: default;
   }
 }
 
@@ -135,7 +135,7 @@ $btn__secondary--color2:              darken($btn__secondary--color1, 10%);
  */
 .btn--#{$positive} {
   background-color: $btn__positive--color1;
-  color: $white;
+  color: $violet--tint-5 !important;
   border: 1px solid $strong;
   &:hover {
   background-color: $btn__positive--color2; 
@@ -157,7 +157,7 @@ $btn__secondary--color2:              darken($btn__secondary--color1, 10%);
 .btn--#{$negative} {
   background-color: $btn__negative--color1;
   color: $white;
-  border: 1px solid $strong;
+  border: 1px solid $violet--shade-1;
   &:hover {
   background-color: $btn__negative--color2; 
   }
@@ -177,8 +177,8 @@ $btn__secondary--color2:              darken($btn__secondary--color1, 10%);
  */
 .btn--#{$secondary} {
   background-color: $btn__secondary--color1;
-  color: $white;
-  border: 1px solid $strong;
+  color: $grey--shade-3 !important;
+  border: 1px solid $grey--shade-1;
   &:hover {
   background-color: $btn__secondary--color2; 
   }

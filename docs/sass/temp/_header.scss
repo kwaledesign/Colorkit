@@ -9,18 +9,18 @@
   margin: 0;
   position: relative;
   text-align: center;
-  background: #DFDFDF;
+  background: $grey--tint-6;    //#DFDFDF;
 }
 
 .header {
   color: #FFF;
   text-shadow: 0px 2px 2px #222;
-  font-family: sans-serif;
-  text-size: 3em;
+  font-family: 'Oswald', sans-serif; 
+  font-size: $copy--h2-size;         //m(5);  //3em;
   width: 200px;
   height: 100px;
   position: absolute;
-  top: 24%;
+  top: 20%;
   left:50%;
   margin-left: -100px;
   margin-right: -100px;
@@ -41,4 +41,14 @@
   margin-left: -100px;
   margin-right: -100px;
   opacity: .75;
+}
+
+.intro {
+  text-align: center;
+  margin: 1em;
+}
+
+.install,
+.page {
+  margin: 1em;
 }

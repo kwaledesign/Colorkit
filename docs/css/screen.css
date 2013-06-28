@@ -712,7 +712,7 @@
  * see compass docs for legacy clearfix options
  */
 /* line 16, ../../../../../../Users/Sam/.rvm/gems/ruby-2.0.0-p0/gems/archetype-0.1.beta.8/stylesheets/archetype/_clearfix.scss */
-.partition:after {
+.nav:after, .partition:after {
   content: "";
   display: table;
   clear: both;
@@ -1463,6 +1463,79 @@ html {
   white-space: nowrap;
 }
 
+/*** @export "nav-object" css */
+/**
+ * Nav Object
+ *
+ * csswizardry.com/2011/09/the-nav-abstraction
+ */
+/* line 7, ../sass/objects/_nav-object.scss */
+.nav {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+/* line 14, ../sass/objects/_nav-object.scss */
+.nav > li, .nav > li > a {
+  display: inline-block;
+}
+
+/**
+ * Nav Sub-Objects
+ *
+ * Extend the Nav-Object
+ *
+ * https://github.com/csswizardry/inuit.css/blob/master/objects/_nav.scss 
+ */
+/**
+ * Vertical Navigation
+ */
+/* line 33, ../sass/objects/_nav-object.scss */
+.nav__vertical > li {
+  display: list-item;
+}
+/* line 35, ../sass/objects/_nav-object.scss */
+.nav__vertical > li > a {
+  display: block;
+}
+
+/**
+ * Full Nav
+ */
+/* line 43, ../sass/objects/_nav-object.scss */
+.nav__full {
+  display: table;
+  width: 100%;
+}
+/* line 46, ../sass/objects/_nav-object.scss */
+.nav__full > li {
+  display: table-cell;
+}
+/* line 48, ../sass/objects/_nav-object.scss */
+.nav__full > li > a {
+  display: block;
+}
+
+/**
+ * Block Nav
+ */
+/* line 59, ../sass/objects/_nav-object.scss */
+.nav__block > li {
+  display: block;
+}
+/* line 61, ../sass/objects/_nav-object.scss */
+.nav__block > li > a {
+  display: block;
+}
+
+/**
+ * Center Nav
+ */
+/* line 71, ../sass/objects/_nav-object.scss */
+.nav__center {
+  text-align: center;
+}
+
 /*** @export "partition-object" css */
 /**
  * Partition Object
@@ -1488,7 +1561,7 @@ html {
  */
 /* line 11, ../sass/components/_page.scss */
 html {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Lora", serif;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
@@ -1502,7 +1575,7 @@ html {
 body {
   color: #4d4d4d;
   background: white;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Lora", serif;
   font-weight: normal;
   margin: 0;
   /* 3 */
@@ -1535,7 +1608,7 @@ body {
 .copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
   font-weight: bold;
   color: #666666;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Oswald", sans-serif;
   text-rendering: optimizelegibility;
 }
 /* line 31, ../sass/components/_typography.scss */
@@ -1909,7 +1982,7 @@ table {
   display: inline-block;
   background: #e6e6e6;
   border: 1px solid #cccccc;
-  color: #ff3333;
+  color: #ca6eca;
   padding: 0 3px;
   font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace, serif;
 }
@@ -1969,7 +2042,7 @@ table {
  */
 /* line 11, ../sass/components/_quotes.scss */
 .copy blockquote {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 24px;
   color: #999999;
   font-style: italic;
@@ -2030,7 +2103,7 @@ table {
  * Small Button 
  */
 /* line 62, ../sass/components/_buttons.scss */
-.btn__small {
+.btn--small {
   font-size: 12px;
   padding: 2px 6px;
   line-height: 24px;
@@ -2042,7 +2115,7 @@ table {
  * Medium Button 
  */
 /* line 73, ../sass/components/_buttons.scss */
-.btn__medium {
+.btn--medium {
   font-size: 14px;
   padding: 5px 9px;
   line-height: 24px;
@@ -2054,7 +2127,7 @@ table {
  * Large Button 
  */
 /* line 84, ../sass/components/_buttons.scss */
-.btn__large, .btn__full {
+.btn--large, .btn--full {
   font-size: 18px;
   padding: 9px 14px;
   line-height: 24px;
@@ -2068,7 +2141,7 @@ table {
  * full screen, block level button style for small screens 
  */
 /* line 97, ../sass/components/_buttons.scss */
-.btn__full {
+.btn--full {
   display: block;
   width: 100%;
   padding-left: 0;
@@ -2108,17 +2181,17 @@ table {
  */
 /* line 136, ../sass/components/_buttons.scss */
 .btn--primary {
-  background-color: #5b8737;
-  color: white;
+  background-color: #cd81cd;
+  color: #fadffa !important;
   border: 1px solid #333333;
 }
 /* line 140, ../sass/components/_buttons.scss */
 .btn--primary:hover {
-  background-color: #436328;
+  background-color: #ca6eca;
 }
 /* line 144, ../sass/components/_buttons.scss */
 .btn--primary:active, .btn--primary.active {
-  background-color: #55723d;
+  background-color: #cf7ccf;
 }
 /* line 148, ../sass/components/_buttons.scss */
 .btn--primary.disabled, .btn--primary[disabled] {
@@ -2133,7 +2206,7 @@ table {
 .btn--danger {
   background-color: #e91c21;
   color: white;
-  border: 1px solid #333333;
+  border: 1px solid #ca6eca;
 }
 /* line 161, ../sass/components/_buttons.scss */
 .btn--danger:hover {
@@ -2154,9 +2227,9 @@ table {
  */
 /* line 178, ../sass/components/_buttons.scss */
 .btn--secondary {
-  background-color: #e6e6e6;
-  color: white;
-  border: 1px solid #333333;
+  background-color: #dfdfdf;
+  color: #464646 !important;
+  border: 1px solid #6c6c6c;
 }
 /* line 182, ../sass/components/_buttons.scss */
 .btn--secondary:hover {
@@ -2414,7 +2487,7 @@ table {
 .copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
   font-weight: bold;
   color: #666666;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Oswald", sans-serif;
   text-rendering: optimizelegibility;
 }
 /* line 31, ../sass/components/_typography.scss */
@@ -2652,19 +2725,19 @@ table {
   margin: 0;
   position: relative;
   text-align: center;
-  background: #DFDFDF;
+  background: #f2f2f2;
 }
 
 /* line 15, ../sass/temp/_header.scss */
 .header {
   color: #FFF;
   text-shadow: 0px 2px 2px #222;
-  font-family: sans-serif;
-  text-size: 3em;
+  font-family: 'Oswald', sans-serif;
+  font-size: 51px;
   width: 200px;
   height: 100px;
   position: absolute;
-  top: 24%;
+  top: 20%;
   left: 50%;
   margin-left: -100px;
   margin-right: -100px;
@@ -2689,541 +2762,63 @@ table {
   opacity: .75;
 }
 
+/* line 46, ../sass/temp/_header.scss */
+.intro {
+  text-align: center;
+  margin: 1em;
+}
+
+/* line 52, ../sass/temp/_header.scss */
+.install,
+.page {
+  margin: 1em;
+}
+
 /**
  * Navigation
  * 
  */
 /* line 6, ../sass/temp/_navigation.scss */
+.my-sticky-element {
+  background-color: #cccccc;
+  text-align: center;
+}
+/* line 9, ../sass/temp/_navigation.scss */
 .my-sticky-element.stuck {
   position: fixed;
   top: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  width: 100%;
 }
 
-/* line 12, ../sass/temp/_navigation.scss */
-.my-sticky-element {
-  background-color: #CCC;
-  padding: 10px;
-  text-align: center;
-}
-
-/**
- * Variables
- */
-/**
- * CSS Triangles
- * 
- * .example { @include cssTriangle(5px, #fff, bottom); }
- */
-/**
- * Color Helpers
- * 
- * return opapue/alpha grey scale
- */
-/**
- * Black and White
- */
-/**
- * Shadow and Highlight
- */
-/**
- * Semantic Utilities
- *
- * utility color variables to extend with semantic variable names
- */
-/**
- * Spacer Units
- */
-/**
- * Radius Unit
- * 
- */
-/**
- * Margined Container
- * 
- * Adds standard padding unit as side margins
- */
-/* line 125, ../sass/temp/_navigation.scss */
-.partition--small, .partition--large {
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-/**
- * Padded Container
- * 
- * Adds standard padding unit as side padding
- */
-/* line 135, ../sass/temp/_navigation.scss */
-.partition--small {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-/**
- * Partition Object
- * 
- */
-/* line 144, ../sass/temp/_navigation.scss */
-.partition {
-  display: block;
-  position: relative;
-}
-/* line 38, ../../../../../../Users/Sam/.rvm/gems/ruby-2.0.0-p0/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.partition:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/**
- * Partitions
- * 
- * Extends the partition object
- */
-/**
- * Partition Variables
- * 
- * 1. optionally rename structure and skin classes
- */
-/* partition Structure Namespace: */
-/* 1 */
-/* 1 */
-/* partition Skin Namespace: */
-/* 1 */
-/* 1 */
-/**
- * Partition Structure
- *
- * 1. remove bottom padding from last child to avoid redunddant spacing,
- *    allow child element to define its vertical-spacing within the partition
- */
-/* line 176, ../sass/temp/_navigation.scss */
-.partition--small {
-  border-radius: 3px;
-}
-/* line 182, ../sass/temp/_navigation.scss */
-.partition--small:last-child {
-  margin-bottom: 0;
-  /* 1 */
-}
-
-/* line 187, ../sass/temp/_navigation.scss */
-.partition--large {
-  border-radius: 6px;
-}
-/* line 193, ../sass/temp/_navigation.scss */
-.partition--large:last-child {
-  /* 1 */
-  margin-bottom: 0;
-}
-
-/**
- * Partition Skin
- */
-/* line 201, ../sass/temp/_navigation.scss */
-.partition--primary {
-  border: 1px solid #999999;
-  background-color: #b3b3b3;
-}
-
-/* line 206, ../sass/temp/_navigation.scss */
-.partition--secondary {
-  border: 1px solid black;
-  background-color: #333333;
-  color: #b3b3b3;
-}
-
-/**
-* Navigation
-*
-*/
-/**
- * Nav Object
- */
-/* line 223, ../sass/temp/_navigation.scss */
-.nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-/* line 38, ../../../../../../Users/Sam/.rvm/gems/ruby-2.0.0-p0/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.nav:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 231, ../sass/temp/_navigation.scss */
-.nav > li > a {
-  display: inline-block;
-}
-
-/**
- * Navigation Sturcutre
- */
-/* line 239, ../sass/temp/_navigation.scss */
-.horizontal a, .vertical a {
-  display: block;
-}
-
-/* line 241, ../sass/temp/_navigation.scss */
-.nav--horizontal > li {
-  display: inline-block;
-}
-
-/* line 244, ../sass/temp/_navigation.scss */
-.nav--vertical > li {
-  display: list-item;
-}
-
-/* line 260, ../sass/temp/_navigation.scss */
-.horizontal-nav > li,
-.vertical-nav > li {
-  border: 1px solid #cccccc;
-  box-shadow: none;
-  border-width: 0 1px 0 0;
-}
-/* line 264, ../sass/temp/_navigation.scss */
-.horizontal-nav > li:last-child,
-.vertical-nav > li:last-child {
-  border-right: none;
-}
-
-/* line 270, ../sass/temp/_navigation.scss */
-.vertical-nav > li,
-.vertical-nav > li {
-  border: 1px solid #cccccc;
-  box-shadow: none;
-  border-width: 0 0 1px 0;
-}
-/* line 274, ../sass/temp/_navigation.scss */
-.vertical-nav > li:last-child,
-.vertical-nav > li:last-child {
-  border-bottom: none;
-}
-
-/* line 285, ../sass/temp/_navigation.scss */
-.flybar-horizontal.right > ul {
-  text-align: right;
-}
-
-/* line 288, ../sass/temp/_navigation.scss */
-.flybar-horizontal.centered > ul {
-  text-align: center;
-}
-
-/* line 291, ../sass/temp/_navigation.scss */
-.flybar-vertical {
-  width: 250px;
-}
-
-/*
-.nav-bar>li>input { 
-  margin: 0 10px; 
-}
-*/
-/* flyout links */
-/* visited state */
-/* hover state */
-/* focus state */
-/* active state */
-/* active state for nested flyouts */
-/* line 358, ../sass/temp/_navigation.scss */
-.flyout {
-  position: relative;
-}
-
-/* line 362, ../sass/temp/_navigation.scss */
-.flyout-panel {
-  display: none;
-  z-index: 40;
-  position: absolute;
-}
-
-/* line 368, ../sass/temp/_navigation.scss */
-.flydown {
-  top: 35px;
-  left: -1px;
-}
-
-/* line 381, ../sass/temp/_navigation.scss */
-.flyright {
-  left: 100%;
-  top: -1px;
-  /* or:
-  left: $navFlyoutBaseWidth;
-  top: 0;
-  */
-}
-
-/* line 389, ../sass/temp/_navigation.scss */
-.flyleft {
-  left: auto;
-  right: 100%;
-}
-
-/* line 394, ../sass/temp/_navigation.scss */
-.flydown-right {
-  top: 35px;
-  left: -1px;
-  /* if a flyout is pulled-right within a flydown-right, overrid it to a flydown-left */
-}
-/* line 397, ../sass/temp/_navigation.scss */
-.flydown-right .flyout-panel {
-  left: 100%;
-  top: -1px;
-  /* or:
-  left: $navFlyoutBaseWidth;
-  top: 0;
-  */
-}
-/* line 406, ../sass/temp/_navigation.scss */
-.flydown-right .pull-right .flyout-panel {
-  top: 35px;
-  right: 0;
-}
-/* line 410, ../sass/temp/_navigation.scss */
-.flydown-right .pull-right .flyout-panel .flyout-panel {
-  left: auto;
-  right: 100%;
-}
-
-/* line 417, ../sass/temp/_navigation.scss */
-.flydown-left {
-  top: 35px;
-  right: 0;
-}
-/* line 421, ../sass/temp/_navigation.scss */
-.flydown-left .flyout-panel {
-  left: auto;
-  right: 100%;
-}
-
-/* line 427, ../sass/temp/_navigation.scss */
-.flydown-down {
-  top: 35px;
-  left: -1px;
-}
-
-/* line 432, ../sass/temp/_navigation.scss */
-.flyright-right {
-  left: 100%;
-  top: -1px;
-  /* or:
-  left: $navFlyoutBaseWidth;
-  top: 0;
-  */
-}
-
-/* line 441, ../sass/temp/_navigation.scss */
-.flyleft-left {
-  right: 100%;
-  top: -1px;
-}
-
-/* line 451, ../sass/temp/_navigation.scss */
-.flyout a {
-  padding: 10px 0 10px 5px;
-}
-
-/* line 455, ../sass/temp/_navigation.scss */
-.flyout-panel {
-  width: 250px;
-}
-
-/* line 464, ../sass/temp/_navigation.scss */
-.flydown .flyout-toggle:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 4px;
-  border-color: red transparent transparent transparent;
-  float: right;
-}
-
-/*
-@if $direction == "flyup" {
-  .flyout-toggle:after {
-    @include cssTriangle(4px, red, up); 
-      float: right;
-      top: 0;
-  }
-}
-*/
-/* line 479, ../sass/temp/_navigation.scss */
-.flyright .flyout-toggle:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 4px;
-  border-color: transparent transparent transparent red;
-  float: right;
-}
-
-/* line 485, ../sass/temp/_navigation.scss */
-.flyleft .flyout-toggle:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 4px;
-  border-color: transparent red transparent transparent;
-  float: left;
-}
-
-/* line 491, ../sass/temp/_navigation.scss */
-.flydown-right .flyout-toggle:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 4px;
-  border-color: red transparent transparent transparent;
-  float: right;
-}
-/* line 495, ../sass/temp/_navigation.scss */
-.flydown-right .flyout-panel .flyout-toggle:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 4px;
-  border-color: transparent transparent transparent red;
-  float: right;
-}
-
-/* line 501, ../sass/temp/_navigation.scss */
-.flydown-left .flyout-toggle:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 4px;
-  border-color: red transparent transparent transparent;
-  float: right;
-}
-/* line 505, ../sass/temp/_navigation.scss */
-.flydown-left .flyout-panel .flyout-toggle:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 4px;
-  border-color: transparent red transparent transparent;
-  float: right;
-}
-
-/* line 514, ../sass/temp/_navigation.scss */
-.flydown-down .flyout-toggle:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 4px;
-  border-color: red transparent transparent transparent;
-  float: right;
-}
-
-/* line 520, ../sass/temp/_navigation.scss */
-.flyright-right .flyout-toggle:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 4px;
-  border-color: transparent transparent transparent red;
-  float: right;
-}
-
-/* line 526, ../sass/temp/_navigation.scss */
-.flyleft-left .flyout-toggle:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border: solid 4px;
-  border-color: transparent red transparent transparent;
-  float: left;
-}
-
-/* line 535, ../sass/temp/_navigation.scss */
-.flyout a {
-  color: #444;
+/* line 18, ../sass/temp/_navigation.scss */
+.main-nav a {
+  color: blue;
   font-weight: normal;
   text-decoration: none;
+  padding: 10px;
+  font-size: 21px;
 }
-/* line 539, ../sass/temp/_navigation.scss */
-.flyout a:visited {
-  color: #444;
+/* line 24, ../sass/temp/_navigation.scss */
+.main-nav a:visited {
+  color: #4c79a5;
 }
-/* line 542, ../sass/temp/_navigation.scss */
-.flyout a:hover {
-  color: #222;
-  background: #d9d9d9;
+/* line 27, ../sass/temp/_navigation.scss */
+.main-nav a:hover {
+  color: #f8cdf8;
+  background: #ac80ac;
 }
-/* line 546, ../sass/temp/_navigation.scss */
-.flyout a:focus {
-  color: dark-blue;
-}
-/* line 551, ../sass/temp/_navigation.scss */
-.flyout .active > a {
-  background: gray;
-}
-/* line 555, ../sass/temp/_navigation.scss */
-.flyout .active .active > a {
-  background: #d9d9d9;
-}
-/* line 559, ../sass/temp/_navigation.scss */
-.flyout .flyout-panel {
-  border: 1px solid #d9d9d9;
-  background: #f2f2f2;
-  text-align: left;
-}
-/* line 565, ../sass/temp/_navigation.scss */
-.flyout .flyout-panel li {
-  border: 1px solid #e6e6e6;
-  -webkit-box-shadow: 0 1px 0 white inset;
-  -moz-box-shadow: 0 1px 0 white inset;
-  box-shadow: 0 1px 0 white inset;
-  border-width: 0 0 1px 0;
-  /*@if $panel-style == "plain" {
-    border: none;
-  }*/
-}
-/* line 575, ../sass/temp/_navigation.scss */
-.flyout .flyout-panel:last-child a {
-  border-bottom: none;
+/* line 31, ../sass/temp/_navigation.scss */
+.main-nav a:focus {
+  color: #4c667f;
 }
 
-/* want this for borderless panels? ........ bordered panel = "menu" ???
-  li.divider {                        
-    border-top: 1px solid white(10%);  /////////skin this
-    height: 0; 
-    padding: 0; 
-  }
-  */
-/* line 622, ../sass/temp/_navigation.scss */
-.pull-right {
-  float: right;
+/* line 37, ../sass/temp/_navigation.scss */
+ul {
+  margin: 0;
 }
 
-/* line 625, ../sass/temp/_navigation.scss */
-.pull-left {
-  float: left;
-}
-
-/* line 629, ../sass/temp/_navigation.scss */
-.active > .flyout-panel {
-  display: block;
-}
-
-/* line 633, ../sass/temp/_navigation.scss */
-.demo-left {
-  margin-left: 45%;
-}
-
+/* hack to override Archetype bug of un-scoped list styles */
 /**
  * Footer
  * 
