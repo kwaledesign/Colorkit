@@ -79,7 +79,7 @@ $selection--color-txt:                $white;         /* 2 */
  * Add the additional typography scope styles and variables next to the main type scope styles and variables.
  */
 
-$copy--body-font:                     $georgia;
+$copy--body-font:                     'Lora', serif;  //'Open Sans', $helvetica;
 
 /**
  * Headers
@@ -89,7 +89,8 @@ $copy--body-font:                     $georgia;
  * Header Text
  */
 $copy--header-color-txt:              black(40);
-$copy--header-txt:                    $helvetica;
+$copy--header-txt:                    'Oswald', sans-serif;  //'Open Sans', $helvetica;
+
 
 /**
  * Header Sizes
@@ -119,8 +120,9 @@ $copy--subheader-size:                ms(3);  // one larger than the paragraph l
 $copy--body-color-bg:                 $white !default;
 $copy--body-color-txt:                black(30) !default;
 $copy--accent-color-txt:              $accent-color--txt;
-$copy--body-txt:                      $georgia;
-$copy--accent-txt:                    $helvetica;
+$copy--body-txt:                      'Lora', serif;  //'Open Sans', $helvetica;
+
+$copy--accent-txt:                    'Open Sans', $helvetica;
 
 /**
  * Paragraph Lead
