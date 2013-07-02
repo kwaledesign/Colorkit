@@ -19,13 +19,13 @@
  * 
  * used in stack functions to create multiple color variants
  */
-$default-amounts  : 20% 40% 60% 70% 80%     !default;
-$sixths: 15% 30% 45% 60% 75% 90%;
+$default-amounts:     20% 40% 60% 70% 80%     !default;
+$sixths:              15% 30% 45% 60% 75% 90%;
 
-$amounts          : $default-amounts        !default;
-$default-tints    : $default-amounts        !default;
-$default-shades   : $default-amounts        !default;
-$default-tones    : $default-amounts        !default;
+$amounts:             $default-amounts        !default;
+$default-tints:       $default-amounts        !default;
+$default-shades:      $default-amounts        !default;
+$default-tones:       $default-amounts        !default;
 
 
 /**
