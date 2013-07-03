@@ -1,0 +1,37 @@
+/**
+ * Navigation
+ * 
+ */
+
+.my-sticky-element {
+  background-color: $grey--tint-4;
+  text-align: center;
+  &.stuck {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    width: 100%;
+  }
+}
+
+.main-nav {
+  a {
+    color: $blue-green--tint-2;
+    font-weight: normal;                   
+    text-decoration: none;
+    padding: 10px;
+    font-size: ms(1);
+    &:visited { 
+      color: $blue-green--tint-2; 
+    }
+    &:hover { 
+      color: $violet--tint-4; 
+      background: $violet--tone-4;
+    } 
+    &:focus { 
+      color: $blue-green--tone-4; 
+    }
+  }
+}
+
+ul { margin: 0; }  /* hack to override Archetype bug of un-scoped list styles */
