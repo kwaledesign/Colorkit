@@ -32,25 +32,72 @@
 <nav class="main-nav my-sticky-element">
   <ul class="nav">
     <li><a href="index.html">Install</a></li>
-    <li><a href="library.html">Library</a></li>
     <li><a href="use.html">Use</a></li>
+    <li><a href="library.html">Library</a></li>
     <li><a href="demo.html">Demo</a></li>
   </ul>
 </nav>
 
-<div class="copy">
+<div class="page copy">
 
 <h1>Use</h1>
 
 <p>Colorkit's `color-scheme-pallet` mixin generates multiple color-swatches based on a single `$key-color` for experimenting with color-schemes in the browser. It generates monochromatic, complementary, split-complementary, triadic, analogous, double-complementary, tetradic, and quadradic color-schemes along with (six by default) tints, tones, and shades of each color in your scheme. These colors are given class names automaticly. </p>
 
 
+<h2>Color Stack Function</h2>
+<p>The color stack function takes a <code>$main</code> color, a <code>$second</code> color, and an <code>$amounts</code> variable to create a list (color pallet) of color values. The way the function works is it takes the two given colors and mixes them using each amount in the <code>$amount</code> variable. In Sass variables are treated as arrays, so it is possible to add additional amount variables with as many amounts as you wish. This color stack concept is borrowed from <a href="https://github.com/Team-Sass/toolkit#colour-stacks">Team Sass' Toolkit</a>. The tint-stack, tone-stack, and shade-stack opperate in the exact same way.</p>
+<pre>
+color-stack($main, $second, $amounts: $default-amounts);
+</pre>
+
+<h2>Grey Scale Functions</h2>
+<p>These are short-hand convenience functions for existing Sass script functions.</p>
+<pre>
+black($tint);
+</pre>
+
+
+<h2>Color Scheme</h2>
+<p>The color scheme mixin generates harmonious color scheme variables based on a given <code>$color-relationship</code>, <code>$base-color</code>, and an optional argument <code>$color-angle</code>. The <code>$base-color</code> argument is the color-scheme's key-color that initiates all other colors. The <code>$color-relationship</code> takes the value of monochromatic, analogous, complementary, split-complementary, triadic, tetradic, or quadradic. The <code>$color-angle</code> argument defaults to 30 degrees, but can be overriden to any value. It is the degrees of seperation (on the color wheel) between colors and allows additional calibration options to fine tune your color scheme.</p>
+
+<pre>
+@include color-scheme($color-relationship, $base-color, $color-angle);
+</pre>
+
+<h2>Swatch Generate</h2>
+<p>The swatch generater mixin automatically generates class names along with the correct background color</p>
+
+<pre>
+@include swatch-gen($color-watches, $swatch-name);
+</pre>
+
+
+
+
+
+
+<h2>Color-Scheme-Pallet</h2>
+<p>The color-scheme-pallet mixin generates monochromatic, complementary, split-complementary, triadic, analogous, double-complementary, tetradic, and quadradic color-schemes along
+  with (six by default) tints, tones, and shades of each color in your scheme. These colors are given class names automaticly. <a href="https://gist.github.com/kwaledesign/5910575">Example HTML Template</a>.</p> 
+
+<p><em>It is important to note the first value in the $tint-stack, $tone-stack, and $shade-stack lists is the unadjusted color, meaning each stack includes the color which the
+stack was derived from. The adjusted colors in the stack begin at 2.</em></p>
+
+<pre>
+@include color-scheme-pallet($key-color);
+</pre>
+
+
+<h2>Color-Pallet</h2>
+<p>The color-pallet partial is the main settings file for all Colorkit mixins and functions. This partial should be imported early in your main Sass file to make Colorkit available to your entire project.</p>
+
 </div>
 
 
 <footer class="footer copy">
   <section>
-    Built by Kwale Design<br />
+    Built by Kwale Design
   </section>
 </footer>
 
