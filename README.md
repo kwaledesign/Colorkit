@@ -61,8 +61,7 @@ color variables. Be sure to `@include` towards the top of your project's main
 stylesheet to be sure these variables are available project wide.
 
 ###Credit
-Color-stack functions were borrowed from [Snugug's](https://twitter.com/Snugug) excellent
-[toolkit](https://github.com/Snugug/toolkit#colour-functions)
+Color-stack functions were borrowed from [Snugug's](https://twitter.com/Snugug) excellent [toolkit](https://github.com/Snugug/toolkit#colour-functions) which has now been moved over to the [Team Sass GitHub](https://github.com/Team-Sass/toolkit).
 
 <hr>
 ### License
