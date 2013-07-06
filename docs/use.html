@@ -99,6 +99,8 @@ color-stack($main, $second, $amounts: $default-amounts);
 @include color-scheme($color-relationship, $base-color, $color-angle);
 </pre>
 
+<p>When using the color-scheme mixin, you get a varying number of output variables based on the color relationship that is passed into the mixin which include a base-color (or key-color) and optionally a <code>$complementary</code>, a <code>$secondaryA</code>, and/or a <code>$secondaryB</code> color. Color theory concepts like this are often a lot easier to understand visually - <a href"http://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm#color_harmonies">here's a good resource</a> for that.</p>
+
 
 <h3>Swatch Generate</h3>
 <p>The swatch generater mixin automatically generates class names along with the correct background color based on a given color list. The <code>$color-swatch</code> variable takes a list of colors. The <code>$swatch-name</code> variable is the class name. It defaults to "color-swatch" but can be overridden to whatever you want.</p>
