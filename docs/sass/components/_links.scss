@@ -7,17 +7,18 @@
 
 .#{$main-type-scope} {
   a {
-    color: blue;
+    color: $blue-green--tint-2;
     font-weight: normal;                   
     text-decoration: none;
     &:visited { 
-      color: blue; 
+      color: $blue-green--tint-2; 
     }
     &:hover { 
-      color: blue; 
+      color: $blue-green--tone-1; 
+      text-decoration: underline;
     } 
     &:focus { 
-      color: blue; 
+      color: $blue-green--tone-1; 
     }
   }
 }

@@ -1947,21 +1947,22 @@ table {
  */
 /* line 9, ../sass/components/_links.scss */
 .copy a {
-  color: blue;
+  color: #4c79a5;
   font-weight: normal;
   text-decoration: none;
 }
 /* line 13, ../sass/components/_links.scss */
 .copy a:visited {
-  color: blue;
+  color: #4c79a5;
 }
 /* line 16, ../sass/components/_links.scss */
 .copy a:hover {
-  color: blue;
+  color: #13497f;
+  text-decoration: underline;
 }
-/* line 19, ../sass/components/_links.scss */
+/* line 20, ../sass/components/_links.scss */
 .copy a:focus {
-  color: blue;
+  color: #13497f;
 }
 
 /*** @export "external-links" css */
@@ -2011,21 +2012,22 @@ table {
  */
 /* line 9, ../sass/components/_links.scss */
 .copy a {
-  color: blue;
+  color: #4c79a5;
   font-weight: normal;
   text-decoration: none;
 }
 /* line 13, ../sass/components/_links.scss */
 .copy a:visited {
-  color: blue;
+  color: #4c79a5;
 }
 /* line 16, ../sass/components/_links.scss */
 .copy a:hover {
-  color: blue;
+  color: #13497f;
+  text-decoration: underline;
 }
-/* line 19, ../sass/components/_links.scss */
+/* line 20, ../sass/components/_links.scss */
 .copy a:focus {
-  color: blue;
+  color: #13497f;
 }
 
 /*** @export "external-links" css */
@@ -2793,7 +2795,7 @@ table {
 
 /* line 18, ../sass/temp/_navigation.scss */
 .main-nav a {
-  color: blue;
+  color: #4c79a5;
   font-weight: normal;
   text-decoration: none;
   padding: 10px;
@@ -2825,6 +2827,6 @@ ul {
  */
 /* line 6, ../sass/temp/_footer.scss */
 .footer {
-  padding: 2em 0 2 em 0;
+  padding: 2em 0 2em 0;
   background-color: #222;
 }
