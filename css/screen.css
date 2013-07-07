@@ -2006,9 +2006,8 @@ table {
 /* line 16, ../sass/components/_links.scss */
 .copy a:hover {
   color: #13497f;
-  text-decoration: underline;
 }
-/* line 20, ../sass/components/_links.scss */
+/* line 19, ../sass/components/_links.scss */
 .copy a:focus {
   color: #13497f;
 }
@@ -2071,9 +2070,8 @@ table {
 /* line 16, ../sass/components/_links.scss */
 .copy a:hover {
   color: #13497f;
-  text-decoration: underline;
 }
-/* line 20, ../sass/components/_links.scss */
+/* line 19, ../sass/components/_links.scss */
 .copy a:focus {
   color: #13497f;
 }
@@ -2868,11 +2866,6 @@ table {
   margin: 1em;
 }
 
-/* line 69, ../sass/temp/_header.scss */
-.page {
-  margin: 1em;
-}
-
 /**
  * Navigation
  * 
@@ -2924,10 +2917,22 @@ ul {
  */
 /* line 6, ../sass/temp/_footer.scss */
 .footer {
-  padding: 2em 0 2em 0;
+  padding: 2em 1em 2em 1em;
   background-color: #222;
+  text-align: center;
 }
 
 /**
  * Codekit Page Layout
  */
+/* line 9, ../sass/temp/_l-page.scss */
+.l-page {
+  margin: 1em;
+}
+@media (min-width: 62.5em) {
+  /* line 9, ../sass/temp/_l-page.scss */
+  .l-page {
+    width: 62.5em;
+    margin: 0 auto;
+  }
+}

@@ -2,20 +2,14 @@
  * Codekit Page Layout
  */
 
+body {
+ // @include debug-vertical-alignment();
+}
+
 .l-page {
-//  max-width: convert-to-em(1000px);
-  @include respond-to(not-large) {
-    margin-left: 1em;
-    margin-right: 1em;
-  } 
-  @include respond-to(large-screen) {
-    width: convert-to-em(1000px); 
+  margin: 1em;
+  @include breakpoint($large-screen) {
+    width: convert-to-em(1000px);
     margin: 0 auto;
   }
 }
-
-body {
-  //@include debug-vertical-alignment();
-}
-
-
