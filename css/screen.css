@@ -12,6 +12,14 @@
  *
  * https://github.com/Team-Sass/breakpoint
  */
+/**
+ * breakpoints for colorkit docs are very simple
+ * the same single-column layout is served to each breakpoint
+ * the only component that needs adjustment base on view port is typography
+ *
+ * the library table breaks at about 550px (due to the length of the variable names)
+ * the navigation breaks at about 350px
+ */
 /*** @export "colorkit" css */
 /**
  * Color Pallet
@@ -1613,102 +1621,142 @@ body {
 }
 /* line 31, ../sass/components/_typography.scss */
 .copy h1 {
-  font-size: 4.1875em;
-  line-height: 1.07463em;
-  margin: 0 auto 0.35821em;
-}
-/* line 36, ../sass/components/_typography.scss */
-.copy h2 {
+  /* small screen styles */
   font-size: 3.1875em;
   line-height: 1.41176em;
   margin: 0 auto 0.47059em;
+  /* large screen styles */
 }
-/* line 41, ../sass/components/_typography.scss */
-.copy h3 {
+@media (min-width: 34.375em) {
+  /* line 31, ../sass/components/_typography.scss */
+  .copy h1 {
+    font-size: 4.1875em;
+    line-height: 1.07463em;
+    margin: 0 auto 0.35821em;
+  }
+}
+/* line 43, ../sass/components/_typography.scss */
+.copy h2 {
+  /* small screen styles */
   font-size: 2.375em;
   line-height: 1.26316em;
   margin: 0 auto 0.63158em;
+  /* large screen styles */
 }
-/* line 46, ../sass/components/_typography.scss */
+@media (min-width: 34.375em) {
+  /* line 43, ../sass/components/_typography.scss */
+  .copy h2 {
+    font-size: 3.1875em;
+    line-height: 1.41176em;
+    margin: 0 auto 0.47059em;
+  }
+}
+/* line 55, ../sass/components/_typography.scss */
+.copy h3 {
+  /* small screen styles */
+  font-size: 1.75em;
+  line-height: 1.71429em;
+  margin: 0 auto 0.85714em;
+  /* large screen styles */
+}
+@media (min-width: 34.375em) {
+  /* line 55, ../sass/components/_typography.scss */
+  .copy h3 {
+    font-size: 2.375em;
+    line-height: 1.26316em;
+    margin: 0 auto 0.63158em;
+  }
+}
+/* line 67, ../sass/components/_typography.scss */
 .copy h4 {
   font-size: 1.75em;
   line-height: 1.71429em;
   margin: 0 auto 0.85714em;
 }
-/* line 51, ../sass/components/_typography.scss */
+/* line 72, ../sass/components/_typography.scss */
 .copy h5 {
   font-size: 1.3125em;
   line-height: 2.28571em;
   margin: 0 auto 1.14286em;
 }
-/* line 56, ../sass/components/_typography.scss */
+/* line 77, ../sass/components/_typography.scss */
 .copy h6 {
   font-size: 1em;
   line-height: 1.5em;
   margin: 0 auto 1.5em;
 }
-/* line 61, ../sass/components/_typography.scss */
+/* line 82, ../sass/components/_typography.scss */
 .copy .subheader {
   color: #999999;
   font-weight: normal;
 }
-/* line 66, ../sass/components/_typography.scss */
+/* line 87, ../sass/components/_typography.scss */
 .copy p {
   margin: 0 auto 1.5em;
 }
-/* line 75, ../sass/components/_typography.scss */
+/* line 96, ../sass/components/_typography.scss */
 .copy .lead {
-  font-size: 1.75em;
-  line-height: 1.71429em;
-  margin: 0 auto 0.85714em;
+  /* small screen styles */
+  font-size: 1.3125em;
+  line-height: 1.37143em;
+  margin: 0 auto 1.14286em;
+  /* large screen styles */
   color: #999999;
 }
-/* line 81, ../sass/components/_typography.scss */
+@media (min-width: 34.375em) {
+  /* line 96, ../sass/components/_typography.scss */
+  .copy .lead {
+    font-size: 1.75em;
+    line-height: 1.5em;
+    margin: 0 auto 0.85714em;
+  }
+}
+/* line 109, ../sass/components/_typography.scss */
 .copy .meta {
   font-size: 0.75em;
   line-height: 1.33333em;
 }
-/* line 85, ../sass/components/_typography.scss */
+/* line 113, ../sass/components/_typography.scss */
 .copy .footnote {
   font-size: 0.5625em;
   line-height: 1.77778em;
 }
-/* line 89, ../sass/components/_typography.scss */
+/* line 117, ../sass/components/_typography.scss */
 .copy .muted {
   color: #b3b3b3;
 }
-/* line 93, ../sass/components/_typography.scss */
+/* line 121, ../sass/components/_typography.scss */
 .copy address {
   display: block;
   margin-bottom: 24px;
   line-height: 24px;
   font-style: normal;
 }
-/* line 99, ../sass/components/_typography.scss */
+/* line 127, ../sass/components/_typography.scss */
 .copy del {
   color: #999999;
   text-decoration: line-through;
 }
-/* line 104, ../sass/components/_typography.scss */
+/* line 132, ../sass/components/_typography.scss */
 .copy cite {
   font-style: normal;
 }
-/* line 109, ../sass/components/_typography.scss */
+/* line 137, ../sass/components/_typography.scss */
 .copy em,
 .copy dfn {
   font-style: italic;
 }
-/* line 113, ../sass/components/_typography.scss */
+/* line 141, ../sass/components/_typography.scss */
 .copy dfn {
   font-weight: bold;
 }
-/* line 117, ../sass/components/_typography.scss */
+/* line 145, ../sass/components/_typography.scss */
 .copy ins {
   background: #ffff99;
   color: black;
   text-decoration: none;
 }
-/* line 124, ../sass/components/_typography.scss */
+/* line 152, ../sass/components/_typography.scss */
 .copy mark {
   font-style: italic;
   font-weight: bold;
@@ -2494,102 +2542,142 @@ table {
 }
 /* line 31, ../sass/components/_typography.scss */
 .copy h1 {
-  font-size: 4.1875em;
-  line-height: 1.07463em;
-  margin: 0 auto 0.35821em;
-}
-/* line 36, ../sass/components/_typography.scss */
-.copy h2 {
+  /* small screen styles */
   font-size: 3.1875em;
   line-height: 1.41176em;
   margin: 0 auto 0.47059em;
+  /* large screen styles */
 }
-/* line 41, ../sass/components/_typography.scss */
-.copy h3 {
+@media (min-width: 34.375em) {
+  /* line 31, ../sass/components/_typography.scss */
+  .copy h1 {
+    font-size: 4.1875em;
+    line-height: 1.07463em;
+    margin: 0 auto 0.35821em;
+  }
+}
+/* line 43, ../sass/components/_typography.scss */
+.copy h2 {
+  /* small screen styles */
   font-size: 2.375em;
   line-height: 1.26316em;
   margin: 0 auto 0.63158em;
+  /* large screen styles */
 }
-/* line 46, ../sass/components/_typography.scss */
+@media (min-width: 34.375em) {
+  /* line 43, ../sass/components/_typography.scss */
+  .copy h2 {
+    font-size: 3.1875em;
+    line-height: 1.41176em;
+    margin: 0 auto 0.47059em;
+  }
+}
+/* line 55, ../sass/components/_typography.scss */
+.copy h3 {
+  /* small screen styles */
+  font-size: 1.75em;
+  line-height: 1.71429em;
+  margin: 0 auto 0.85714em;
+  /* large screen styles */
+}
+@media (min-width: 34.375em) {
+  /* line 55, ../sass/components/_typography.scss */
+  .copy h3 {
+    font-size: 2.375em;
+    line-height: 1.26316em;
+    margin: 0 auto 0.63158em;
+  }
+}
+/* line 67, ../sass/components/_typography.scss */
 .copy h4 {
   font-size: 1.75em;
   line-height: 1.71429em;
   margin: 0 auto 0.85714em;
 }
-/* line 51, ../sass/components/_typography.scss */
+/* line 72, ../sass/components/_typography.scss */
 .copy h5 {
   font-size: 1.3125em;
   line-height: 2.28571em;
   margin: 0 auto 1.14286em;
 }
-/* line 56, ../sass/components/_typography.scss */
+/* line 77, ../sass/components/_typography.scss */
 .copy h6 {
   font-size: 1em;
   line-height: 1.5em;
   margin: 0 auto 1.5em;
 }
-/* line 61, ../sass/components/_typography.scss */
+/* line 82, ../sass/components/_typography.scss */
 .copy .subheader {
   color: #999999;
   font-weight: normal;
 }
-/* line 66, ../sass/components/_typography.scss */
+/* line 87, ../sass/components/_typography.scss */
 .copy p {
   margin: 0 auto 1.5em;
 }
-/* line 75, ../sass/components/_typography.scss */
+/* line 96, ../sass/components/_typography.scss */
 .copy .lead {
-  font-size: 1.75em;
-  line-height: 1.71429em;
-  margin: 0 auto 0.85714em;
+  /* small screen styles */
+  font-size: 1.3125em;
+  line-height: 1.37143em;
+  margin: 0 auto 1.14286em;
+  /* large screen styles */
   color: #999999;
 }
-/* line 81, ../sass/components/_typography.scss */
+@media (min-width: 34.375em) {
+  /* line 96, ../sass/components/_typography.scss */
+  .copy .lead {
+    font-size: 1.75em;
+    line-height: 1.5em;
+    margin: 0 auto 0.85714em;
+  }
+}
+/* line 109, ../sass/components/_typography.scss */
 .copy .meta {
   font-size: 0.75em;
   line-height: 1.33333em;
 }
-/* line 85, ../sass/components/_typography.scss */
+/* line 113, ../sass/components/_typography.scss */
 .copy .footnote {
   font-size: 0.5625em;
   line-height: 1.77778em;
 }
-/* line 89, ../sass/components/_typography.scss */
+/* line 117, ../sass/components/_typography.scss */
 .copy .muted {
   color: #b3b3b3;
 }
-/* line 93, ../sass/components/_typography.scss */
+/* line 121, ../sass/components/_typography.scss */
 .copy address {
   display: block;
   margin-bottom: 24px;
   line-height: 24px;
   font-style: normal;
 }
-/* line 99, ../sass/components/_typography.scss */
+/* line 127, ../sass/components/_typography.scss */
 .copy del {
   color: #999999;
   text-decoration: line-through;
 }
-/* line 104, ../sass/components/_typography.scss */
+/* line 132, ../sass/components/_typography.scss */
 .copy cite {
   font-style: normal;
 }
-/* line 109, ../sass/components/_typography.scss */
+/* line 137, ../sass/components/_typography.scss */
 .copy em,
 .copy dfn {
   font-style: italic;
 }
-/* line 113, ../sass/components/_typography.scss */
+/* line 141, ../sass/components/_typography.scss */
 .copy dfn {
   font-weight: bold;
 }
-/* line 117, ../sass/components/_typography.scss */
+/* line 145, ../sass/components/_typography.scss */
 .copy ins {
   background: #ffff99;
   color: black;
   text-decoration: none;
 }
-/* line 124, ../sass/components/_typography.scss */
+/* line 152, ../sass/components/_typography.scss */
 .copy mark {
   font-style: italic;
   font-weight: bold;
@@ -2723,14 +2811,14 @@ table {
 /* line 6, ../sass/temp/_header.scss */
 .masthead {
   padding-top: 8em;
-  padding-bottom: 2em;
+  padding-bottom: 5em;
   margin: 0;
   position: relative;
   text-align: center;
-  background: #f2f2f2;
+  background: #cccccc;
 }
 
-/* line 15, ../sass/temp/_header.scss */
+/* line 18, ../sass/temp/_header.scss */
 .header {
   color: #FFF;
   text-shadow: 0px 2px 2px #222;
@@ -2746,13 +2834,23 @@ table {
   z-index: 2;
 }
 
-/* line 30, ../sass/temp/_header.scss */
+/* line 34, ../sass/temp/_header.scss */
 .slogan {
   z-index: 2;
-  color: #222;
+  font-size: 21px;
+  color: #FFF;
+  text-shadow: 0px 1px 2px #1a1a1a;
+  width: 350px;
+  height: 100px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  margin-left: -175px;
+  margin-right: -175px;
+  z-index: 2;
 }
 
-/* line 35, ../sass/temp/_header.scss */
+/* line 52, ../sass/temp/_header.scss */
 .logo {
   width: 200px;
   height: 200px;
@@ -2761,17 +2859,16 @@ table {
   left: 50%;
   margin-left: -100px;
   margin-right: -100px;
-  opacity: .75;
+  z-index: 1;
 }
 
-/* line 46, ../sass/temp/_header.scss */
+/* line 64, ../sass/temp/_header.scss */
 .intro {
   text-align: center;
   margin: 1em;
 }
 
-/* line 52, ../sass/temp/_header.scss */
-.install,
+/* line 69, ../sass/temp/_header.scss */
 .page {
   margin: 1em;
 }
@@ -2782,7 +2879,7 @@ table {
  */
 /* line 6, ../sass/temp/_navigation.scss */
 .my-sticky-element {
-  background-color: #cccccc;
+  background-color: #dfdfdf;
   text-align: center;
 }
 /* line 9, ../sass/temp/_navigation.scss */
@@ -2830,3 +2927,7 @@ ul {
   padding: 2em 0 2em 0;
   background-color: #222;
 }
+
+/**
+ * Codekit Page Layout
+ */
