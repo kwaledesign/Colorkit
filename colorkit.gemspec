@@ -1,15 +1,15 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.4.5"
-  s.date = "2013-06-22"
+  s.version = "0.4.6"
+  s.date = "2013-07-07"
 
   # Gem Details
   s.name = "colorkit"
   s.authors = ["Sam Ashley"]
   s.summary = %q{A Compass extension for building harmonious color schemes in Sass}
-  s.description = %q{A Compass extension for building harmonious color schemes in Sass}
+  s.description = %q{Built on Compass and Sass Colorkit provides a sensible default color library along additional functions and mixins that make generating harmonious color schemes a breeze.}
   s.email = "sam@kwaledesign.com"
-  s.homepage = "http://wwww.kwaledesign.com"
+  s.homepage = "https://kwaledesign.github.io/Colorkit"
 
   # Gem Files
   s.files = %w(README.md LICENSE)
