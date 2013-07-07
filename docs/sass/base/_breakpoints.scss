@@ -7,4 +7,20 @@
 
 @import "breakpoint";
 
+/**
+ * breakpoints for colorkit docs are very simple
+ * the same single-column layout is served to each breakpoint
+ * the only component that needs adjustment base on view port is typography
+ *
+ * the library table breaks at about 550px (due to the length of the variable names)
+ * the navigation breaks at about 350px
+ */
 
+$breakpoint-to-ems: true;
+
+//$bp1:    convert-to-em(550px);
+
+$breakpoints: 'small-screen' 550px,
+              'not-large' (max-width 1000px),
+              'large-screen' (min-width 1001px),
+              'high resolution' (min-resolution 1.5dppx);
