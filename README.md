@@ -49,8 +49,8 @@ $red-orange--shade-3;
 ###Mixins and Functions
 Colorkit includes mixins and functions for creating color schemes, color
 stacks, and experimenting entire pallets by automatically generating class names
-to use with the pallet template. These are fairly well commented within the
-source, hopefully documentation here will be updated soon.
+to use with the pallet template. Checkout the
+[documentation](kwaledesign.github.io/Colorkit) for further information.
 
 ###Color Pallet
 The `color-pallet.scss` partial is the main settings file for using Colorkit
