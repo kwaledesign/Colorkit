@@ -9,7 +9,7 @@ Checkout the [Colorkit Codepen](http://codepen.io/kwaledesign/pen/glxBi) to play
 
 ##Installation:
 Install the Colorkit gem (you may need to run as sudo depending on your Ruby
-enviornment).
+environment).
 ```
 gem install colorkit
 ```
@@ -48,7 +48,7 @@ $red-orange--shade-3;
 ```
 ###Mixins and Functions
 Colorkit includes mixins and functions for creating color schemes, color
-stacks, and experimenting entire pallets by automaticlly generating class names
+stacks, and experimenting entire pallets by automatically generating class names
 to use with the pallet template. These are fairly well commented within the
 source, hopefully documentation here will be updated soon.
 
