@@ -5,22 +5,20 @@ Built on Compass and Sass, Colorkit provides a sensible default color library
 along with additional functions and mixins that make generating harmonious
 color schemes a breeze.
 
-Checkout the [Colorkit Codepen](http://codepen.io/kwaledesign/pen/glxBi) to play with a live version. 
+Checkout the [Colorkit Codepen](http://codepen.io/kwaledesign/pen/glxBi) to play with a live version, or read the [docs](kwaledesign.github.io/Colorkit).
 
 ##Installation:
-1. Download or clone the Colorkit repo
-2. Install the Colorkit gem
+Install the Colorkit gem (you may need to run as sudo depending on your Ruby
+enviornment).
 ```
-sudo gem install colorkit
+gem install colorkit
 ```
-3. Run compass create specifying your project's directory (run compass create --help for further instructions).
+Run compass create specifying your project's directory (run compass create --help for further instructions).
 ```
 compass create my_project_name -r colorkit --using colorkit
 ```
 
-To use Colorkit in an existing project:
-1. Download and install Colorkit
-2. Edit your project's config.rb file adding:
+To use Colorkit in an existing project edit your project's config.rb file adding:
 ```
 require 'colorkit'
 ```
@@ -65,5 +63,5 @@ Color-stack functions were borrowed from [Snugug's](https://twitter.com/Snugug) 
 
 <hr>
 ### License
-© Kwale Design - Original source code dual licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php) / [GPL2 license](http://www.gnu.org/licenses/gpl-2.0.html). Open-sourced projects used within this project retain their original licenses.
+© Kwale Design - Original source code dual licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php) / [GPL2 license](http://www.gnu.org/licenses/gpl-2.0.html).
 
