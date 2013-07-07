@@ -18,9 +18,6 @@
 
 $breakpoint-to-ems: true;
 
-//$bp1:    convert-to-em(550px);
+$small-screen: 550px;
+$large-screen: 1000px;
 
-$breakpoints: 'small-screen' 550px,
-              'not-large' (max-width 1000px),
-              'large-screen' (min-width 1001px),
-              'high resolution' (min-resolution 1.5dppx);

@@ -41,7 +41,7 @@
 <div class="page copy l-page">
 
 <h1>Use</h1>
-<p class="lead">Colorkit provides a library of default color variables, multiple utility functions and mixins, and a color scheme mixin that automatically generates the classes for building color pallets for use in responsive deliverables and <a href="http://styletil.es/">style tiles</a>.</p>
+<p class="lead">Colorkit provides a library of default color variables, multiple utility functions and mixins, and a color scheme mixin that automatically generate the classes for building color pallets for use in responsive deliverables and <a href="http://styletil.es/">style tiles</a>.</p>
 
 <h2>Color Library</h2>
 <p>Colorkit&#39;s default color library is based off the primary colors red, yellow, and blue keywords <a href="http://www.w3.org/TR/SVG/types.html#ColorKeywords">defined in SVG</a> and referenced in the <a href="http://www.w3.org/TR/css3-color/#svg-color">Level 3 CSS Color Module</a>. Secondary and tertiary colors are derived in equal parts using <a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#mix-instance_method">Sass&#39;s mix function</a>. Each of these key-colors are then used in Colorkit&#39;s tint-stack, tone-stack, and shade-stack functions to produce the value stacks for each color. Each of these color swatches is given a variable name based of the <a href="http://bem.info">BEM</a> naming methodology, as defined <a href="https://github.com/kwaledesign/Code-Standards">here</a>.</p>
@@ -51,7 +51,6 @@ $color-name--value-name;
 </pre>
 
 <h2>Colorkit Utility Functions</h2>
-<p>Colorkit's  utility functions include black/white/alpha, swatch gen, color/tint/tone/shade stacks </p>
 
 <h3>Opaque Gray Scale Functions</h3>
 <p>These are short-hand convenience functions for existing Sass script functions. Opaque gray scale functions are ideal for backgrounds and text.</p>
@@ -117,7 +116,7 @@ $color-swatches: color-stack(red, blue, $default-amounts);
 </pre>
 
 
-<h2>Color-Scheme-Pallet</h2>
+<h2>Color Scheme Pallet</h2>
 <p>The color-scheme-pallet mixin generates monochromatic, complementary, split-complementary, triadic, analogous, double-complementary, tetradic, and quadradic color-schemes along with (six by default) tints, tones, and shades of each color in your scheme. These colors are given class names automatically and can be used with the <a href="https://gist.github.com/kwaledesign/5910575">HTML Template</a> when building pallets and <a href="http://styletil.es/">style tiles</a>.</p> 
 
 <p><em>It is important to note the first value in the $tint-stack, $tone-stack, and $shade-stack lists is the unadjusted color, meaning each stack includes the color which the
@@ -135,7 +134,7 @@ stack was derived from. The adjusted colors in the stack begin at 2.</em></p>
 
 <footer class="footer copy">
   <section>
-    © <a href="http://kwaledesign.com">Kwale Design</a> - Original source code dual licensed under <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a> / <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL2 license</a>.
+    © <a href="http://kwaledesign.com">Kwale Design</a> - Original <a href="https://github.com/kwaledesign/Colorkit">source code</a> dual licensed under <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a> / <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL2 license</a>.
   </section>
 </footer>
 
