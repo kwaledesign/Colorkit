@@ -65,3 +65,7 @@ Color-stack functions were borrowed from [Snugug's](https://twitter.com/Snugug) 
 ### License
 © Kwale Design - Original source code dual licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php) / [GPL2 license](http://www.gnu.org/licenses/gpl-2.0.html).
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kwaledesign/colorkit/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
